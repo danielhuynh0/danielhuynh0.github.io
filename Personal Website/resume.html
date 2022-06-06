@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="eng-US", dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description: content=Personal website for software developer Daniel Huynh">
+    <title>Daniel Huynh</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="headerstyles.css">
+    <style>
+
+        .flex-container {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .site {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resume {
+            display: grid;
+            grid-template-columns: 10% [first] 30% [line2] 50% [last] 10px;
+            position: relative;
+            top: 160px;
+            z-index: 0;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .download {
+            grid-column-start: first;
+            grid-column-end: line2;
+            justify-content: center;
+        }
+
+        .resume img {
+            grid-column-start: line2;
+            grid-column-end: last;
+        }
+
+        .downloadbutton {
+            position: relative;
+            top: 15px;
+            left: 50px;
+            background-color:#f1dac4;
+            color: black;
+            padding: 15px 15px 15px 15px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .downloadbutton:hover {
+            background-color:#f1dac4a9;
+        }
+
+        @media screen and (max-width: 800px) {
+            .header .info {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            .header a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .resume {
+                top: 200px;
+            }
+
+            .downloadbutton {
+                left: -5px;
+            }
+
+        }
+
+        @media screen and (max-width: 535px) {
+            .downloadbutton {
+                padding: 10px 10px 10px 10px;
+            }
+        }
+
+    </style>
+</head>
+<tail>
+    <div class="site">
+    <div class="header">
+        <div class="info">
+        <h1>Daniel Huynh</h1>
+        <h4>Software Developer</h4>
+        </div>
+        <dix class="flex-container">
+        <div><a href="contact.html">Contact</a></div>
+        <div><a class="active" href="resume.html">Resume</a></div>
+        <div><a href="projects.html">Projects</a></div>
+        <div><a href="aboutme.html">About Me</a></div>
+        <div><a href="index.html">Home</a></div>
+        </dix>
+        </div>
+    </div>
+
+    <div class="resume">
+        <div class="download">
+        <h2>Download My Resume</h2>
+        <p></p>
+        <a class="downloadbutton" href="DanielHuynh_resume.docx" download>Download (.docx)</a>
+        </div>
+        <img src="Resume.png", width="662.4", height="710.4", ALIGN="right", hspace="25", vspace="25">
+    </div>
+    </div>
+</tail>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="eng-US", dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description: content=Personal website for software developer Daniel Huynh">
+    <title>Daniel Huynh</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="headerstyles.css">
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .site {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .aboutme {
+            position: relative;
+            top: 150px;
+            z-index: 0;
+            text-align: justify;
+
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px 20px 20px 20px;
+            font-size: 15px;
+        }
+
+        #proj {
+            background: #4096e7;
+            border: 2px solid #4096e7;
+            color: white;
+            padding: 20px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+        }
+        #proj:hover {
+            background-color:#4096e7c0;
+            border: 2px solid #4096e7c0;
+        }
+        #github {
+            background-color: white;
+            border: 2px solid black;
+            color: black;
+            padding: 20px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+        }
+        #github:hover {
+            background-color: #f1dac4a9;
+        }
+
+        @media screen and (max-width: 800px) {
+            .header .info {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            .header a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            .aboutme {
+                position: relative;
+                top: 200px;
+                z-index: 0;
+            }
+
+        }
+
+        @media screen and (max-width: 1000px) {
+            .links {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<tail>
+    <div class="site">
+    <div class="header">
+        <div class="info">
+        <h1>Daniel Huynh</h1>
+        <h4>Software Developer</h4>
+        </div>
+        <dix class="flex-container">
+        <div><a href="contact.html">Contact</a></div>
+        <div><a href="resume.html">Resume</a></div>
+        <div><a href="projects.html">Projects</a></div>
+        <div><a href="aboutme.html">About Me</a></div>
+        <div><a class="active" href="index.html">Home</a></div>
+        </div>
+        </div>
+    </div>
+
+    <div class="aboutme">
+    <img src="my_picture.jpg" ALIGN="right", alt="My Picture", width="485.775", height="489.6", hspace="25", vspace="25"/>
+    <h1>Hello, I'm Daniel Huynh</h1>
+    <p>I am a second year student at the University of Virginia,
+        majoring in computer science in the College of Engineering and Applied Sciences at UVA, 
+        and minoring in data science.
+    </p>
+    <p>
+        Below, you can find out more about the projects that I have worked on or am currently involved
+        in, as well as a link to my Github.
+    </p>
+    <p>
+        Also, please check out the links above in the menu for my resume as well as a way to contact me. Thank you!
+    </p>
+    
+    <div class="links">
+    <div><a href="projects.html" id="proj">Projects</a></div>
+    <div><a href="https://github.com/danielhuynh0?tab=repositories" id="github">Github <img src="github.png" ALIGN="center",width="57.5", height="37.5", hspace="0"/></a></div>
+    </div>
+
+    </div>
+    </div>
+</tail>
+</html>
