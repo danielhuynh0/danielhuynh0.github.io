@@ -25,11 +25,26 @@
             position: relative;
             top: 150px;
             z-index: 0;
-            text-align: justify;
+            text-align: center;
 
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
+        .continfo {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .email a {
+            text-decoration: none;
+            color: black;
+        }
+
+        img {
+            border-radius: 25px;
+        }
 
 
         @media screen and (max-width: 800px) {
@@ -73,13 +88,22 @@
     <div class="contact">
 
         <h1>Contact</h1>
-        <h3>Emails</h3>
-        <a href="mailto: danielhuynh@email.virginia.edu">danielhuynh@email.virginia.edu</a>
-        <p></p>
-        <a href="mailto: danielhuynh523@gmail.com">danielhuynh523@gmail.com</a>
-        <h3>Phone Number</h3>
-        <p>(215)-870-5157</p>
-    
+        <div class="continfo">
+        <div class="email" style="position:relative; left:-40px;">
+            <img src="mail.png", height="40", width="40"/>
+            <h3>Email</h3>
+            <a href="mailto: danielhuynh@email.virginia.edu">danielhuynh@email.virginia.edu</a>
+            <p></p>
+            <a href="mailto: danielhuynh523@gmail.com">danielhuynh523@gmail.com</a>
+        </div>
+
+        <div class="phone">
+            <img src="phone.png", height="40", width="40"/>
+            <h3>Phone Number</h3>
+            <p>(215)-870-5157</p>
+            <p></p>
+        </div>
+        </div>
     </div>
     </div>
 </tail>

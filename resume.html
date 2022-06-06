@@ -44,14 +44,22 @@
         .downloadbutton {
             position: relative;
             top: 15px;
-            left: 50px;
-            background-color:#f1dac4;
+            left: 40px;
+            background-color: white;
+            border: 2px solid black;
             color: black;
             padding: 15px 15px 15px 15px;
             text-decoration: none;
             border-radius: 10px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-weight: bold;
+        }
+
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
         }
 
         .downloadbutton:hover {
@@ -109,7 +117,10 @@
         <div class="download">
         <h2>Download My Resume</h2>
         <p></p>
-        <a class="downloadbutton" href="DanielHuynh_resume.docx" download>Download (.docx)</a>
+        <div class="buttons">
+        <div><a class="downloadbutton" href="DanielHuynh_resume.docx" download>Download (.docx)</a></div>
+        <div><a class="downloadbutton" href="DanielHuynhResumePDF.pdf" download>Download  (.pdf)</a></div>
+        </div>
         </div>
         <img src="Resume.png", width="662.4", height="710.4", ALIGN="right", hspace="25", vspace="25">
     </div>
