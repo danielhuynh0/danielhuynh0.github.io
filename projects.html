@@ -53,6 +53,24 @@
             border-radius: 10px;
         }
 
+        .page {
+            position: relative;
+            top: 150px;
+        }
+
+        .projects {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .projects p {
+            text-align: center;
+        }
+
         @media screen and (max-width: 800px) {
             .header .info {
                 float: none;
@@ -85,7 +103,7 @@
     <div class="header">
         <div class="info">
         <h1>Daniel Huynh</h1>
-        <h4>Software Developer</h4>
+        <h4>Student Software Developer</h4>
         </div>
         <dix class="flex-container">
         <div><a href="contact.html">Contact</a></div>
@@ -97,8 +115,16 @@
         </div>
     </div>
 
+    <div class="page">
     <div class="projects">
-    
+
+        <div class="studentenrollment">
+            <h1>Student Enrollment Application</h1>
+            <!-- Add pciture here-->
+            <p>Made using Java and JavaFX library</p>
+            <p>Implemented with Apache Derby database</p>
+        </div>
+
     </div>
     </div>
 </tail>
