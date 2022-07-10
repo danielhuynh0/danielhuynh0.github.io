@@ -34,6 +34,7 @@
             grid-column-start: first;
             grid-column-end: line2;
             justify-content: center;
+            align-items: center;
         }
 
         .resume img {
@@ -55,7 +56,6 @@
             font-weight: bold;
         }
 
-
         .buttons {
             display: flex;
             flex-direction: row;
@@ -64,6 +64,15 @@
 
         .downloadbutton:hover {
             background-color:#f1dac4a9;
+        }
+
+        #resumeimg {
+            transition: width 1s height 1s;
+        }
+
+        #resumeimg:hover {
+            width: 794.88px;
+            height: 852.48px;
         }
 
         @media screen and (max-width: 800px) {
@@ -126,7 +135,7 @@
         <div><a class="downloadbutton" href="DanielHuynhResumePDF.pdf" download>Download  (.pdf)</a></div>
         </div>
         </div>
-        <img src="Resume.png", width="662.4", height="710.4", ALIGN="right", hspace="25", vspace="25">
+        <img id="resumeimg" src="Resume.png", width="662.4", height="710.4", ALIGN="right", hspace="25", vspace="25">
     </div>
     </div>
 </tail>
