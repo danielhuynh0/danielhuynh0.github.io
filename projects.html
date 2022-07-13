@@ -20,38 +20,6 @@
             display: flex;
             flex-direction: column;
         }
-        
-        .aboutme {
-            position: relative;
-            top: 150px;
-            z-index: 0;
-            text-align: justify;
-
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
-        .links {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            padding: 20px 20px 20px 20px;
-
-        }
-
-        #proj {
-            background-color:aliceblue;
-            padding: 20px;
-            text-decoration: none;
-            border-radius: 10px;
-        }
-        #github {
-            background-color:aliceblue;
-            padding: 20px;
-            text-decoration: none;
-            border-radius: 10px;
-        }
 
         .page {
             position: relative;
@@ -64,11 +32,72 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            font-family:Arial, Helvetica, sans-serif;
+            padding: 10px;
+            gap: 20px;
+        }
+
+        .projects a {
+            text-decoration: none;
+        }
+
+        .projects h1 {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
-        .projects p {
+        .projects li {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .studentenrollment {
+            max-width: 1300px;
+            padding: 0.625rem;
+            border-radius: 6px;
+            box-shadow: 0px 2px 15px 2px;
+            background-color:beige;
+        }
+
+        .studentenrollment img {
+            width: 400px;
+            height: auto;
+        }
+
+        .studentenrollment .imgs {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .calculator {
+            max-width: 1300px;
+            padding: 0.625rem;
+            border-radius: 6px;
+            box-shadow: 0px 2px 15px 2px;
+            background-color:beige;
+        }
+
+        .calculator #img1 {
+            width: 850px;
+            height: auto;
             text-align: center;
+        }
+
+        .calculator #img2 {
+            height: 450px;
+            width: auto;
+        }
+
+        .calculator .imgs {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            padding: 5px;
+            justify-content: center;
+        }
+
+        .studentenrollment #img3 {
+            height: 270px;
+            width: auto;
         }
 
         @media screen and (max-width: 800px) {
@@ -118,11 +147,36 @@
     <div class="page">
     <div class="projects">
 
+        <div class="calculator">
+            <h1>Online Calculator App</h1>
+            <div class="imgs">
+            <img id="img1" src="onlinecalculatorimg.png">
+            <img id="img2" src="calc.png">
+            </div>
+            <li>Written with JavaScript, HTML, and CSS</li>
+            <li>Hosted online by Github Pages</li>
+            <p>A four function calculator written in JavaScript, allowing users to
+                continuously compute, using previous computed answers. Can be visited at danielhuynh0.github.io/online-calculator
+            </p>
+            <a href="https://danielhuynh0.github.io/online-calculator">Visit App</a>
+        </div>
+
         <div class="studentenrollment">
             <h1>Student Enrollment Application</h1>
+            <div class="imgs">
+            <img src="stud1.PNG">
+            <img src="stud3.PNG">
+            <img id="img3" src="stud2.PNG">
+            </div>
             <!-- Add pciture here-->
-            <p>Made using Java and JavaFX library</p>
-            <p>Implemented with Apache Derby database</p>
+            <li>Written using Java and JavaFX library </li>
+            <li> Implemented with Apache Derby database</li>
+            <p>This application allows users to manage a
+                education institution database system, allowing the user to
+                interact with a GUI in order to either load existing school
+                data, or to edit data, either to enroll a student, add an instructor, add a course,
+                or remove students, instructors, or courses.
+            </p>
         </div>
 
     </div>

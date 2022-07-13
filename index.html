@@ -18,15 +18,38 @@
         .site {
             display: flex;
             flex-direction: column;
+            background-color: rgb(241, 208, 168);
         }
-        
-        .aboutme {
+
+        .herowrap {
             position: relative;
             top: 150px;
             z-index: 0;
-            text-align: justify;
+        }
 
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+            max-width: 68.75rem;
+            margin: auto;
+            text-align: justify;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .bio {
+            width: 35rem;
+            padding: 0.625rem;
+            border-radius: 6px;
+            box-shadow: 0px 2px 15px 2px;
+            background-color:beige;
+        }
+
+        .picture img{
+            border: 1px solid #4b40e8;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
         }
 
         .links {
@@ -40,18 +63,18 @@
         }
 
         #proj {
-            background: #4096e7;
-            border: 2px solid #4096e7;
-            color: white;
+            background: white;
+            border: 2px solid #352bb6e1;
+            color: #352bb6e1;
             padding: 20px;
             text-decoration: none;
             border-radius: 10px;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
         }
         #proj:hover {
-            background-color:#4096e7c0;
-            border: 2px solid #4096e7c0;
+            background-color: #d6d3e47e;
+            border: 2px solid #352bb6e1;
         }
         #github {
             background-color: white;
@@ -60,7 +83,7 @@
             padding: 20px;
             text-decoration: none;
             border-radius: 10px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
         }
         #github:hover {
@@ -91,28 +114,70 @@
                 display: flex;
                 flex-direction: column;
             }
+
+            .mypicture {
+                width: 340.0425px;
+                height: 342.72px;
+            }
+
+            .hero {
+                flex-direction: column;
+            }
+
+            .bio {
+                width: 20rem;
+            }
         }
     </style>
 </head>
 <tail>
     <div class="site">
-    <div class="header">
-        <div class="info">
-        <h1>Daniel Huynh</h1>
-        <h4>Student Software Developer</h4>
+        hello
+        <div class="header">
+            <div class="info">
+            <h1>Daniel Huynh</h1>
+            <h4>Student Software Developer</h4>
+            </div>
+            <dix class="flex-container">
+            <div><a href="contact.html">Contact</a></div>
+            <div><a href="resume.html">Resume</a></div>
+            <div><a href="projects.html">Projects</a></div>
+            <div><a href="aboutme.html">About Me</a></div>
+            <div><a class="active" href="index.html">Home</a></div>
+            </div>
         </div>
-        <dix class="flex-container">
-        <div><a href="contact.html">Contact</a></div>
-        <div><a href="resume.html">Resume</a></div>
-        <div><a href="projects.html">Projects</a></div>
-        <div><a href="aboutme.html">About Me</a></div>
-        <div><a class="active" href="index.html">Home</a></div>
-        </div>
+
+        <div class="herowrap">
+            <section class="hero">
+                <img class="mypicture" src="my_picture.jpg" ALIGN="right", alt="My Picture", width="485.775", height="489.6", hspace="25", vspace="25"/>
+                <div class="bio">
+                    <h1>Hello, I'm Daniel Huynh</h1>
+                    <p>I am a second year student at the University of Virginia,
+                    majoring in computer science in the College of Engineering and Applied Sciences at UVA, 
+                    and minoring in data science.
+                    </p>
+                    <p>
+                    Below, you can find out more about the projects that I have worked on or am currently involved
+                    in, as well as a link to my Github.
+                    </p>
+                    <p>
+                    Also, please check out the links above in the menu for my resume as well as a way to contact me. Thank you!
+                    </p>
+    
+                    <div class="links">
+                        <div><a href="projects.html" id="proj">Projects</a></div>
+                        <div><a href="https://github.com/danielhuynh0?tab=repositories" id="github">Github <img src="github.png" ALIGN="center",width="57.5", height="37.5", hspace="0"/></a></div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
-
+    <!--
     <div class="aboutme">
+    <div class="picture">
     <img src="my_picture.jpg" ALIGN="right", alt="My Picture", width="485.775", height="489.6", hspace="25", vspace="25"/>
+    </div>
+    <div class="desc">
     <h1>Hello, I'm Daniel Huynh</h1>
     <p>I am a second year student at the University of Virginia,
         majoring in computer science in the College of Engineering and Applied Sciences at UVA, 
@@ -130,8 +195,9 @@
     <div><a href="projects.html" id="proj">Projects</a></div>
     <div><a href="https://github.com/danielhuynh0?tab=repositories" id="github">Github <img src="github.png" ALIGN="center",width="57.5", height="37.5", hspace="0"/></a></div>
     </div>
-
     </div>
     </div>
+    </div>
+-->
 </tail>
 </html>

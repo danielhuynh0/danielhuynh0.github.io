@@ -24,6 +24,7 @@
         .resume {
             display: grid;
             grid-template-columns: 3% [first] 30% [line2] 50% [last] 10px;
+            grid-template-rows: 150px [first] 25% [line2];
             position: relative;
             top: 160px;
             z-index: 0;
@@ -35,6 +36,13 @@
             grid-column-end: line2;
             justify-content: center;
             align-items: center;
+            width: auto;
+            height: auto;
+            padding: 0.625rem;
+            padding-left: 15px;
+            border-radius: 6px;
+            box-shadow: 0px 2px 15px 2px;
+            background-color:beige;
         }
 
         .resume img {
