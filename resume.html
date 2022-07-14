@@ -21,10 +21,9 @@
             flex-direction: column;
         }
 
-        .resume {
-            display: grid;
-            grid-template-columns: 3% [first] 30% [line2] 50% [last] 10px;
-            grid-template-rows: 150px [first] 25% [line2];
+        .resume {           
+            display: flex;
+            flex-direction: row;
             position: relative;
             top: 160px;
             z-index: 0;
@@ -37,7 +36,7 @@
             justify-content: center;
             align-items: center;
             width: auto;
-            height: auto;
+            max-height: 200px;
             padding: 0.625rem;
             padding-left: 15px;
             border-radius: 6px;
@@ -83,7 +82,13 @@
             max-height: 852.48px;
         }
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 1300px) {
+            .buttons {
+                flex-direction: column;
+                gap: 35px;
+            }
+        }
+        @media screen and (max-width: 1000px) {
             .header .info {
                 float: none;
                 display: block;
@@ -105,15 +110,16 @@
 
             .buttons {
                 flex-direction: column;
-                gap: 10px;
+                gap: 35px;
             }
 
             #resumeimg {
                 visibility: hidden;
+                width: 0px;
             }
 
             .download {
-                grid-column-end: last;
+                max-width: 90%;
             }
 
         }
