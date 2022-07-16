@@ -16,15 +16,18 @@
         }
 
         .site {
-            display: flex;
-            flex-direction: column;
-            background-color: rgb(241, 208, 168);
+            background-color: blue;
+            z-index: 0;
         }
 
         .herowrap {
-            position: relative;
-            top: 150px;
+            position: fixed;
+            padding: 0px;
+            left: 0;
+            right: 0;
+            top: 134px;
             z-index: 0;
+            background-color: #87ceeb;
         }
 
         .hero {
@@ -46,12 +49,6 @@
             background-color:#f5f5e9;
         }
 
-        .picture img{
-            border: 1px solid #4b40e8;
-            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-
         .links {
             display: flex;
             flex-direction: row;
@@ -66,9 +63,9 @@
             background: white;
             border: 2px solid #352bb6e1;
             color: #352bb6e1;
-            padding: 20px;
+            padding: 16px 40px;
+            border-radius: 5px;
             text-decoration: none;
-            border-radius: 10px;
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bolder;
         }
@@ -80,11 +77,11 @@
             background-color: white;
             border: 2px solid black;
             color: black;
-            padding: 20px;
+            padding: 16px 40px;
+            border-radius: 5px;
             text-decoration: none;
-            border-radius: 10px;
             font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
+            font-weight: bolder;
         }
         #github:hover {
             background-color: #f1dac4a9;
@@ -101,9 +98,9 @@
                 display: block;
                 text-align: left;
             }
-            .aboutme {
+            .herowrap {
                 position: relative;
-                top: 200px;
+                top: 170px;
                 z-index: 0;
             }
 
@@ -132,7 +129,6 @@
 </head>
 <tail>
     <div class="site">
-        hello
         <div class="header">
             <div class="info">
             <h1>Daniel Huynh</h1>
