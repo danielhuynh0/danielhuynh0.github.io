@@ -11,48 +11,37 @@
     <link rel="stylesheet" type="text/css" href="headerstyles.css">
     <style>
 
-        .flex-container {
-            display: flex;
-            flex-direction: row-reverse;
-        }
-
-        .site {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .resume {           
-            display: flex;
-            flex-direction: row;
+        .resume {
             position: relative;
-            top: 160px;
-            z-index: 0;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            top: 150px;
+        }
+
+        .download-wrap {
+            position: flex;
+            margin: auto;
+            width: 50%;
+            border: 2px solid rgb(190, 172, 72);
+            background-color: #f5f5e9;
+            padding: 15px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
         }
 
         .download {
-            grid-column-start: first;
-            grid-column-end: line2;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: auto;
-            max-height: 200px;
-            padding: 0.625rem;
-            padding-left: 15px;
-            border-radius: 6px;
-            box-shadow: 0px 2px 15px 2px;
-            background-color:#f5f5e9;
-        }
-
-        .resume img {
-            grid-column-start: line2;
-            grid-column-end: last;
+            padding: 15px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            gap: -3px;
         }
 
         .downloadbutton {
             position: relative;
-            top: 15px;
-            left: 0px;
             background-color: white;
             border: 2px solid black;
             color: black;
@@ -63,74 +52,15 @@
             font-weight: bold;
         }
 
+        .downloadbutton:hover {
+            background-color:#f1dac4a9;
+        }
+
         .buttons {
             display: flex;
             flex-direction: row;
             gap: 20px;
         }
-
-        .downloadbutton:hover {
-            background-color:#f1dac4a9;
-        }
-
-        #resumeimg {
-            transition: width 1s height 1s;
-        }
-
-        #resumeimg:hover {
-            max-width: 794.88px;
-            max-height: 852.48px;
-        }
-
-        @media screen and (max-width: 1300px) {
-            .buttons {
-                flex-direction: column;
-                gap: 35px;
-            }
-        }
-        @media screen and (max-width: 1000px) {
-            .header .info {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-            .header a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-
-            .resume {
-                top: 200px;
-            }
-
-            .downloadbutton {
-                left: -5px;
-            }
-
-            .buttons {
-                flex-direction: column;
-                gap: 35px;
-            }
-
-            #resumeimg {
-                visibility: hidden;
-                width: 0px;
-            }
-
-            .download {
-                max-width: 90%;
-            }
-
-        }
-
-        @media screen and (max-width: 535px) {
-            .downloadbutton {
-                padding: 10px 10px 10px 10px;
-            }
-
-        }
-
     </style>
 </head>
 <tail>
@@ -151,16 +81,16 @@
     </div>
 
     <div class="resume">
-        <div class="download">
-        <h2>Download My Resume</h2>
-        <p></p>
-        <div class="buttons">
-        <div><a class="downloadbutton" href="DanielHuynh_resume.docx" download>Download (.docx)</a></div>
-        <div><a class="downloadbutton" href="DanielHuynhResumePDF.pdf" download>Download  (.pdf)</a></div>
+        <div class="download-wrap">
+            <div class="download">
+                <h2>Download My Resume</h2>
+                <p></p>
+                <div class="buttons">
+                    <div><a class="downloadbutton" href="DanielHuynh_resume.docx" download>Download (.docx)</a></div>
+                    <div><a class="downloadbutton" href="DanielHuynhResumePDF.pdf" download>Download  (.pdf)</a></div>
+                </div>
+            </div>
         </div>
-        </div>
-        <img id="resumeimg" src="Resume.png", width="662.4", height="710.4", ALIGN="right", hspace="25", vspace="25">
-    </div>
     </div>
 </tail>
 </html>
