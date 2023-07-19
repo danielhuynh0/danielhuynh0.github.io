@@ -18,7 +18,7 @@ const StartPage = () => {
     return (
         <div>
             <div className="bg-gray-900 h-screen flex items-center justify-center">
-                <div className="max-w-2xl mx-auto px-4 text-center">
+                <div className="max-w-2xl mx-auto px-4 sm:mb-8 text-center">
                     <img
                         src="my_picture.jpg"
                         alt="Profile Picture"
