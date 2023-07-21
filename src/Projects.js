@@ -20,14 +20,27 @@ const Projects = React.forwardRef((props, ref) => {
             images: ["stud1.PNG", "stud3.PNG"],
             description: "This application allows users to manage a education institution database system, allowing the user to interact with a GUI in order to either load existing school data, or to edit data, either to enroll a student, add an instructor, add a course, or remove students, instructors, or courses.",
             tools: "Written using Java and JavaFX library, styled with CSS, and implemented with Apache Derby database, using SQL queries. I focused a lot more on the functionality and have not yet fully worked on designing the UI aspect yet, but I plan to do so soon in the future.",
-            link: "",
+            link: "https://github.com/danielhuynh0/student-enrollment",
         },
         {
           title: "Weather Application",
           images: [],
           description: "Allows a user to enter in a location name and see displayed weather data for that location.",
-          tools: "Web app written with React, styled with TailwindCSS. Uses OpenWeatherMap API for the weather data. It is not yet fully completed, but I plan to finish it soon in the future.",
-          link: "",
+          tools: "Web app written with React, styled with TailwindCSS. Uses OpenWeatherMap API for the weather data. It is not yet fully completed, but I plan to finish it soon in the future."
+        },
+        {
+          title: "Online Calculator",
+          images: ["online-calculator.png"],
+          description: "A simple online calculator that allows a user to perform basic arithmetic operations. A user can do multiple operations in a row using the answer from the previous operation.",
+          tools: "Written with simple HTML/CSS/JavaScript.",
+          link: "https://danielhuynh0.github.io/online-calculator/",
+        },
+        {
+          title: "Cat Generator",
+          images: ["cat-generator.png"],
+          description: "Generates a random cat image from The Cat API.",
+          tools: "Written with simple HTML/CSS/JavaScript. Makes calls to The Cat API to return the cat image to be displayed.",
+          link: "https://danielhuynh0.github.io/my-cat-generator/",
         }
     ];
 
@@ -59,7 +72,7 @@ const Projects = React.forwardRef((props, ref) => {
       
       const Portfolio = () => (
           <div>
-            <div className="max-w-6xl mx-auto px-4 mt-32">
+            <div className="max-w-6xl mx-auto px-4 sm:mt-32">
               <h1 className="text-5xl font-bold text-white mb-12 text-center">Projects</h1>
               <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-14">
                 {projects.map((project) => (

@@ -38,9 +38,15 @@ const StartPage = () => {
                         </button>
                         <button
                             onClick={handleClickProjects}
-                            className="bg-gray-800 text-white hover:bg-gray-700 rounded-full px-6 py-3 text-lg font-semibold"
+                            className="bg-gray-400 text-white hover:bg-gray-500 rounded-full px-6 py-3 text-lg font-semibold mr-4"
                         >
                             My Projects
+                        </button>
+                        <button
+                            onClick={handleClickProjects}
+                            className="bg-gray-800 text-white hover:bg-gray-500 rounded-full px-6 py-3 text-lg font-semibold"
+                        >
+                            Experience
                         </button>
                     </div>
                 </div>
