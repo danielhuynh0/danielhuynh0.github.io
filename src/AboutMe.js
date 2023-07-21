@@ -4,7 +4,7 @@ const AboutMe = React.forwardRef((props, ref) => {
     return (
         <section ref={ref}>
             <div className="bg-gray-900 h-screen flex items-center justify-center">
-                <div className="max-w-2xl mx-auto px-4 lg:mt-8 md:mt-12 sm:mt-32 text-center">
+                <div className="max-w-2xl mx-auto px-4 lg:mt-8 md:mt-16 sm:mt-42 text-center">
                     <h1 className="text-5xl font-bold text-white mb-8">About Me</h1>
                     <p className="text-lg text-gray-300 mb-8">
                         I was born in Philadelphia, Pennsylvania. I have spent most of my life in the Philadelphia area, as I graduated from Phoenixville Area High School with Distinguished Honors with the class of 2021. My family immigrated from Vietnam as refugees shortly before I was born, and I am proudly the first of my extended family to be born in the United States, hoping to carry on their legacy.

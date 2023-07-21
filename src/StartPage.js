@@ -24,7 +24,7 @@ const StartPage = () => {
                         alt="Profile Picture"
                         className="rounded-full w-40 h-40 object-cover mx-auto mb-8"
                     />
-                    <h1 className="lg:text-5xl md:text-5xl sm:text-xl font-bold text-white mb-8">Hello! My name is Daniel Huynh.</h1>
+                    <h1 className="text-5xl font-bold text-white mb-8">Hello! My name is Daniel Huynh.</h1>
                     <p className="lg:text-lg md:text-lg sm:text-md text-gray-300 mb-8">
                         I'm a third-year student of computer science at UVA.
                         I love solving puzzles, algorithms, machine learning, physics, and space. I'm excited to share my journey with you.
