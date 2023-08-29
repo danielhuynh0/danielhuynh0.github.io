@@ -73,7 +73,7 @@ const Projects = React.forwardRef((props, ref) => {
       const Portfolio = () => (
           <div>
             <div className="max-w-6xl mx-auto px-4 lg:mt-8 md:mt-16 sm:mt-42">
-              <h1 className="text-5xl font-bold text-white mb-12 text-center">Projects</h1>
+              <h1 className="text-2xl lg:text-5xl font-bold text-white mb-12 text-center">Projects</h1>
               <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-14">
                 {projects.map((project) => (
                   <ProjectBox key={project.id} project={project} />
@@ -85,7 +85,7 @@ const Projects = React.forwardRef((props, ref) => {
 
 
     return (
-        <section ref={ref}>
+        <section ref={ref} className="mt-16">
             <div className="bg-gray-900 min-h-screen flex justify-center">
                 <Portfolio/>
             </div>
