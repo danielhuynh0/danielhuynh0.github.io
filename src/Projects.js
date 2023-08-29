@@ -85,7 +85,7 @@ const Projects = React.forwardRef((props, ref) => {
 
 
     return (
-        <section ref={ref} className="mt-16">
+        <section ref={ref} className="mt-48">
             <div className="bg-gray-900 min-h-screen flex justify-center">
                 <Portfolio/>
             </div>
