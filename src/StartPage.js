@@ -32,19 +32,19 @@ const StartPage = () => {
                     <div className="flex justify-center">
                         <button
                             onClick={handleClickAbout}
-                            className="bg-white text-gray-900 hover:bg-gray-100 rounded-full px-4 py-1 md:px-6 md:py-3 lg:text-lg md:text-sm text-xs font-semibold mr-4"
+                            className="bg-white text-gray-900 hover:bg-gray-100 rounded-full px-6 py-3 lg:text-lg md:text-lg text-xs font-semibold mr-4"
                         >
                             About Me
                         </button>
                         <button
                             onClick={handleClickProjects}
-                            className="bg-gray-400 text-white hover:bg-gray-500 rounded-full px-6 py-3 lg:text-lg md:text-sm text-xs font-semibold mr-4"
+                            className="bg-gray-400 text-white hover:bg-gray-500 rounded-full px-6 py-3 lg:text-lg md:text-lg text-xs font-semibold mr-4"
                         >
                             My Projects
                         </button>
                         <button
                             onClick={handleClickProjects}
-                            className="bg-gray-800 text-white hover:bg-gray-500 rounded-full px-6 py-3 lg:text-lg md:text-sm text-xs font-semibold"
+                            className="bg-gray-800 text-white hover:bg-gray-500 rounded-full px-6 py-3 lg:text-lg md:text-lg text-xs font-semibold"
                         >
                             Experience
                         </button>
