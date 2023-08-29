@@ -3,7 +3,7 @@ import React from "react";
 const AboutMe = React.forwardRef((props, ref) => {
     return (
         <section ref={ref} className="mt-8">
-            <div className="bg-gray-900 h-screen flex items-center justify-center">
+            <div className="bg-gray-900 h-screen flex-col items-center justify-center">
                 <div className="max-w-2xl mx-auto px-4 text-center">
                     <h1 className="text-2xl md:text-5xl font-bold text-white mb-8">About Me</h1>
                     <p className="text-md lg:text-lg md:text-lg sm:text-md text-gray-300 mb-8">
@@ -17,6 +17,26 @@ const AboutMe = React.forwardRef((props, ref) => {
                         Two of the most important things that my parents have always taught me from their childhood and life experiences were the importance of a good attitude and a good work ethic, two things of which I strive to achieve in my work everyday as a student, both at UVA, and as a student of life.
                     </p>
                 </div>
+                <div className="flex justify-center">
+                <a
+                    href="https://www.floodwatch.io/"
+                    className="bg-white text-gray-900 hover:bg-gray-100 rounded-full px-6 py-3 lg:text-lg md:text-lg text-xs font-semibold mr-4"
+                >
+                    Floodwatch
+                </a>
+                <a
+                    href="https://www.ansys.com/products/missions/ansys-stk"
+                    className="bg-gray-500 text-white hover:bg-gray-600 rounded-full px-6 py-3 lg:text-lg md:text-lg text-xs font-semibold mr-4"
+                >
+                    Ansys STK
+                </a>
+                <a
+                    href="DanielHuynh_Resume - Fall 2023.pdf"
+                    className="bg-gray-800 text-white hover:bg-gray-500 rounded-full px-6 py-3 lg:text-lg md:text-lg text-xs font-semibold"
+                >
+                    Resume
+                </a>
+            </div>
             </div>
         </section>
     )
