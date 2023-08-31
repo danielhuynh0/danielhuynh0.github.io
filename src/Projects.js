@@ -23,11 +23,13 @@ const Projects = React.forwardRef((props, ref) => {
             link: "https://github.com/danielhuynh0/student-enrollment",
         },
         {
-          title: "Weather Application",
-          images: [],
-          description: "Allows a user to enter in a location name and see displayed weather data for that location.",
-          tools: "Web app written with React, styled with TailwindCSS. Uses OpenWeatherMap API for the weather data. It is not yet fully completed, but I plan to finish it soon in the future."
+          title: "Detecting Bias in Social Media Posts: Machine Learning",
+          images: ["social-media-bias.png"],
+          description: "Used machine learning to analyze a dataset of social media posts and determine whether the posts were politcally charged. Utilized SVM and Logistic Regression models, run on different parameters: different kernels, C, gamma, degree values, and found best performing model on test data. Best performing classifier was found to be the Logistic Regression classifier with C = 0.1, tolerance = 0.01, and liblinear solver with a 75% accuracy.",
+          tools: "Written using the pandas and scikit-learn libraries in Python.",
+          link: "https://github.com/danielhuynh0/social-media-bias-ml",
         },
+        
         {
           title: "Online Calculator",
           images: ["online-calculator.png"],
@@ -41,6 +43,12 @@ const Projects = React.forwardRef((props, ref) => {
           description: "Generates a random cat image from The Cat API.",
           tools: "Written with simple HTML/CSS/JavaScript. Makes calls to The Cat API to return the cat image to be displayed.",
           link: "https://danielhuynh0.github.io/my-cat-generator/",
+        },
+        {
+          title: "Weather Application",
+          images: [],
+          description: "Allows a user to enter in a location name and see displayed weather data for that location.",
+          tools: "Web app written with React, styled with TailwindCSS. Uses OpenWeatherMap API for the weather data. It is not yet fully completed, but I plan to finish it soon in the future."
         }
     ];
 
