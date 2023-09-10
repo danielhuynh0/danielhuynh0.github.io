@@ -28,8 +28,7 @@ const Projects = React.forwardRef((props, ref) => {
           description: "Used machine learning to analyze a dataset of social media posts and determine whether the posts were politcally charged. Utilized SVM and Logistic Regression models, run on different parameters: different kernels, C, gamma, degree values, and found best performing model on test data. Best performing classifier was found to be the Logistic Regression classifier with C = 0.1, tolerance = 0.01, and liblinear solver with a 75% accuracy.",
           tools: "Written using the pandas and scikit-learn libraries in Python.",
           link: "https://github.com/danielhuynh0/social-media-bias-ml",
-        },
-        
+        },     
         {
           title: "Online Calculator",
           images: ["online-calculator.png"],
