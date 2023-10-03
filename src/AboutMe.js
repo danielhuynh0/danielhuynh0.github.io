@@ -10,7 +10,7 @@ const AboutMe = React.forwardRef((props, ref) => {
                         I was born in Philadelphia, Pennsylvania. I have spent most of my life in the Philadelphia area, as I graduated from Phoenixville Area High School with Distinguished Honors with the class of 2021. My family immigrated from Vietnam as refugees shortly before I was born, and I am proudly the first of my extended family to be born in the United States, hoping to carry on their legacy.
                     </p>
                     <p className="text-md lg:text-lg md:text-lg sm:text-md text-gray-300 mb-8">
-                        This summer, I am an intern at Ansys, an engineering simulation software company, working with the AGI Systems Tool Kit (STK) software. I am also working as a researcher in the CS Department of UVA for the Floodwatch project under Professor Rich Nguyen, a project funded by the National Science Foundation.
+                        This summer, I am an intern at Ansys, an engineering simulation software company, working with the AGI Systems Tool Kit (STK) software. I am also working as a researcher in the CS Department of UVA for the Floodwatch project under Professor Rich Nguyen, a project funded by the National Science Foundation. As a researcher, I am in charge of LiDAR research and its applications for flood detection sensors and water depth mapping.
                     </p>
                     <p className="text-md lg:text-lg md:text-lg sm:text-md text-gray-300 mb-8">
                         Some things I love doing outside of school are working on projects, as well as running (cross country and track) and playing soccer.
