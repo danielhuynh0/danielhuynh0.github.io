@@ -16,6 +16,12 @@ const Projects = React.forwardRef((props, ref) => {
           tools: "Frontend implemented with React. Python used for backend, with Flask. Web scraping done with Beautiful Soup. We utilize the NLTK Python library to perform NLP. We plan to store login data in Firebase (in the process of being implemented)."
         },
         {
+          title: "HooEvents",
+          images: [],
+          description: "A social app for students to post, connect, and find events and their location and times at UVA. I implemented login with Google OAuth, pin locations and find directions to events with Google Maps API, managed the PostgreSQL database and migrations to Heroku server. Application built with Django. Used GitHub Actions to manage CI and automate integration testing.",
+          tools: "Built with Django, data managed with PostgreSQL, hosted on Heroku. Utilized Google Map API to implement location services."
+        },
+        {
             title: "Student Enrollment Application",
             images: ["stud1.PNG", "stud3.PNG"],
             description: "This application allows users to manage a education institution database system, allowing the user to interact with a GUI in order to either load existing school data, or to edit data, either to enroll a student, add an instructor, add a course, or remove students, instructors, or courses.",
