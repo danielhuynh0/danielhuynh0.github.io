@@ -31,7 +31,7 @@ const AboutMe = React.forwardRef((props, ref) => {
                         Ansys STK
                     </a>
                     <a
-                        href="DanielHuynh_Resume - Fall 2023.pdf"
+                        href="DanielHuynh - Resume Winter 2023.pdf"
                         className="bg-gray-800 text-white hover:bg-gray-500 rounded-full px-6 py-3 lg:text-lg md:text-lg text-xs font-semibold"
                     >
                         Resume

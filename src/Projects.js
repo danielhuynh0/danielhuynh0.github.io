@@ -22,6 +22,18 @@ const Projects = React.forwardRef((props, ref) => {
           tools: "Built with Django, data managed with PostgreSQL, hosted on Heroku. Utilized Google Map API to implement location services."
         },
         {
+          title: "HearIt",
+          images: [],
+          description: "Music social media web app where users can share posts to global & friends-only feed of favorite songs/artists/albums, join communities of similar interests, add friends, like/share comments on posts, and play snippet of song directly from post.",
+          tools: "Built with Spotify API, Angular, TypeScript, PHP, PostgreSQL, HTML/CSS"
+        },
+        {
+          title: "Traffic Detection AI",
+          images: [],
+          description: "utilize Random Forest and RNNs to build and train models predicting if traffic will occur on roads an hour in advance, with 92% validation accuracy on binary classification of traffic. Dataset from detectors setup by ETH Zurich.",
+          tools: "Built with Python, utilizing scikit-learn and TensorFlow & Keras libraries."
+        },
+        {
             title: "Student Enrollment Application",
             images: ["stud1.PNG", "stud3.PNG"],
             description: "This application allows users to manage a education institution database system, allowing the user to interact with a GUI in order to either load existing school data, or to edit data, either to enroll a student, add an instructor, add a course, or remove students, instructors, or courses.",
