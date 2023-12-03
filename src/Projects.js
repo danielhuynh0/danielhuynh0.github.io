@@ -19,13 +19,15 @@ const Projects = React.forwardRef((props, ref) => {
           title: "HooEvents",
           images: [],
           description: "A social app for students to post, connect, and find events and their location and times at UVA. I implemented login with Google OAuth, pin locations and find directions to events with Google Maps API, managed the PostgreSQL database and migrations to Heroku server. Application built with Django. Used GitHub Actions to manage CI and automate integration testing.",
-          tools: "Built with Django, data managed with PostgreSQL, hosted on Heroku. Utilized Google Map API to implement location services."
+          tools: "Built with Django, data managed with PostgreSQL, hosted on Heroku. Utilized Google Map API to implement location services.",
+          link: "https://asd-team-a04-929b38293922.herokuapp.com/hoo_event/"
         },
         {
           title: "HearIt",
           images: [],
           description: "Music social media web app where users can share posts to global & friends-only feed of favorite songs/artists/albums, join communities of similar interests, add friends, like/share comments on posts, and play snippet of song directly from post.",
-          tools: "Built with Spotify API, Angular, TypeScript, PHP, PostgreSQL, HTML/CSS"
+          tools: "Built with Spotify API, Angular, TypeScript, PHP, PostgreSQL, HTML/CSS",
+          link: "https://github.com/danielhuynh0/music-social-media"
         },
         {
           title: "Traffic Detection AI",
