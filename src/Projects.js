@@ -25,8 +25,8 @@ const Projects = React.forwardRef((props, ref) => {
         {
           title: "HearIt",
           images: [],
-          description: "Music social media web app where users can share posts to global & friends-only feed of favorite songs/artists/albums, join communities of similar interests, add friends, like/share comments on posts, and play snippet of song directly from post.",
-          tools: "Leverages the Spotify API. Built with Angular frontend, a Django backend, and PostgreSQL database, leveraging Django REST Framework for API endpoints between client-server, TypeScript, PHP, HTML/CSS. Hosting to be done on Heroku.",
+          description: "Music social media web app where users can share posts to global & friends-only feed of favorite songs/artists/albums, join communities of similar interests, add friends, like/share comments on posts, and play snippet of song directly from a post. I originally built this app in PHP, but I am rebuilding it in Angular and Django.",
+          tools: "Built with Angular frontend, a Django backend, and PostgreSQL database, leveraging Django REST Framework for RESTful API endpoints between client-server, TypeScript, PHP, HTML/CSS. Hosting to be done on Heroku. Leverages the Spotify API for music library and playing of snippets.",
           link: "https://github.com/danielhuynh0/hearit"
         },
         {
