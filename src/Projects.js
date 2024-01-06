@@ -17,7 +17,7 @@ const Projects = React.forwardRef((props, ref) => {
         },
         {
           title: "HooEvents",
-          images: [],
+          images: ['hooevents.png'],
           description: "A social app for students to post, connect, and find events and their location and times at UVA. I implemented login with Google OAuth, pin locations and find directions to events with Google Maps API, managed the PostgreSQL database and migrations to Heroku server. Application built with Django. Used GitHub Actions to manage CI and automate integration testing.",
           tools: "Built with Django, data managed with PostgreSQL, hosted on Heroku. Utilized Google Map API to implement location services.",
           link: "https://asd-team-a04-929b38293922.herokuapp.com/hoo_event/"
@@ -26,14 +26,15 @@ const Projects = React.forwardRef((props, ref) => {
           title: "HearIt",
           images: [],
           description: "Music social media web app where users can share posts to global & friends-only feed of favorite songs/artists/albums, join communities of similar interests, add friends, like/share comments on posts, and play snippet of song directly from post.",
-          tools: "Built with Spotify API, Angular, TypeScript, PHP, PostgreSQL, HTML/CSS",
-          link: "https://github.com/danielhuynh0/music-social-media"
+          tools: "Leverages the Spotify API. Built with Angular frontend, a Django backend, and PostgreSQL database, leveraging Django REST Framework for API endpoints between client-server, TypeScript, PHP, HTML/CSS. Hosting to be done on Heroku.",
+          link: "https://github.com/danielhuynh0/hearit"
         },
         {
           title: "Traffic Detection AI",
           images: [],
-          description: "utilize Random Forest and RNNs to build and train models predicting if traffic will occur on roads an hour in advance, with 92% validation accuracy on binary classification of traffic. Dataset from detectors setup by ETH Zurich.",
-          tools: "Built with Python, utilizing scikit-learn and TensorFlow & Keras libraries."
+          description: "Utilize Random Forest and RNNs to build and train models predicting if traffic will occur on roads an hour in advance, with 92% validation accuracy on binary classification of traffic. Dataset from detectors setup by ETH Zurich.",
+          tools: "Built with Python, utilizing scikit-learn and TensorFlow & Keras libraries.",
+          link: "TrafficDetectionAI.pdf"
         },
         {
             title: "Student Enrollment Application",
@@ -86,12 +87,13 @@ const Projects = React.forwardRef((props, ref) => {
             <h3 className="text-lg font-semibold text-gray-900 mb-0">Tools Used</h3>
             <p className="text-gray-700 mb-2">{project.tools}</p>
             <div className="px-0 py-4">
+              {project.link && (
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4"
-                >Visit</a>
+                >Visit</a>)}
             </div>
           </div>
         );
