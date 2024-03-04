@@ -10,6 +10,12 @@ const Projects = React.forwardRef((props, ref) => {
             link: "https://devpost.com/software/budgetbuddy-wz0mh2",
         },
         {
+          title: "CliniVision",
+          images: ['CliniVision.png'],
+          description: 'CliniVision is a multifaceted project that seeks to shorten patient wait times within hospital settings. The CliniVision tool\'s final goal is to take in a fresh postanterior chest x-ray and label the x-ray with the symptoms found within the x-ray. Images are first put through a standardization model that corrctly orients, crops, and zooms the image to a standardized coordinate system. These symptoms are identified and localized with a certain location on the image. Using the identified symptoms and their localizations, the tool will output a diagnosis of the patient\'s condition.',
+          tools: "Using NextJS for frontend and the TensorFlow Keras library, we trained a CNN model encapsulating an implementation of a Spatial Transformer to create a standardization model for images, allowing images to be correctly oriented, cropped, and zoomed to a standardized coordinate system. We also used the TensorFlow Keras library to train a CNN model to identify and localize symptoms on the x-ray images. Finally, we are experimenting with different models to output a diagnosis of the patient's condition based on the identified symptoms and their localizations, namely a simple decision tree from the Scikit-Learn library, and a neural network from Tensorflow Keras.",
+        },
+        {
           title: "Stock Market Bot",
           images: ['smb.png'],
           description: "Allows a user to enter and search for a stock ticker. The bot will load a description of the stock itself, as well as a graph of the stock's price history. It will also utilize natural language processing on live news sites to determine the sentiment of the news articles on the stock, as well as ML models on the stock's price history, to determine whether to recommend the user to buy, sell, or hold the stock at this current time. This project was done as part of my team for Project Code.",
@@ -27,7 +33,7 @@ const Projects = React.forwardRef((props, ref) => {
           images: [],
           description: "Music social media web app where users can share posts to global & friends-only feed of favorite songs/artists/albums, join communities of similar interests, add friends, like/share comments on posts, and play snippet of song directly from a post. I originally built this app in PHP, but I am rebuilding it in Angular and Django.",
           tools: "Built with Angular frontend, a Django backend, and PostgreSQL database, leveraging Django REST Framework for RESTful API endpoints between client-server, TypeScript, PHP, HTML/CSS. Hosting to be done on Heroku. Leverages the Spotify API for music library and playing of snippets.",
-          link: "https://github.com/danielhuynh0/hearit"
+          link: "https://github.com/danielhuynh0/hear-it"
         },
         {
           title: "Traffic Detection AI",
