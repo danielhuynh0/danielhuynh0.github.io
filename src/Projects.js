@@ -14,6 +14,7 @@ const Projects = React.forwardRef((props, ref) => {
           images: ['CliniVision.png'],
           description: 'CliniVision is a multifaceted project that seeks to shorten patient wait times within hospital settings. The CliniVision tool\'s final goal is to take in a fresh postanterior chest x-ray and label the x-ray with the symptoms found within the x-ray. Images are first put through a standardization model that corrctly orients, crops, and zooms the image to a standardized coordinate system. These symptoms are identified and localized with a certain location on the image. Using the identified symptoms and their localizations, the tool will output a diagnosis of the patient\'s condition.',
           tools: "Using NextJS for frontend and the TensorFlow Keras library, we trained a CNN model encapsulating an implementation of a Spatial Transformer to create a standardization model for images, allowing images to be correctly oriented, cropped, and zoomed to a standardized coordinate system. We also used the TensorFlow Keras library to train a CNN model to identify and localize symptoms on the x-ray images. Finally, we are experimenting with different models to output a diagnosis of the patient's condition based on the identified symptoms and their localizations, namely a simple decision tree from the Scikit-Learn library, and a neural network from Tensorflow Keras.",
+          link: "https://github.com/Project-Code-UVA/CliniVision",
         },
         {
           title: "Stock Market Bot",
