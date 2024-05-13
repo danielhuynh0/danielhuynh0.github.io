@@ -14,7 +14,7 @@ const Projects = React.forwardRef((props, ref) => {
           images: ['healthway.png'],
           description: "HealthWay is a versatile kitchen tool and lifestyle app designed to help users manage their food inventory in real time, offering timely updates. We plan to integrate the platform with a real-time sensor/camera, placed into a refrigerator, such that it can automatically track user inventory. Our app starts by allowing the user to take a photo of their fridge, or record a video of the user placing items into the fridge, from which it recognizes the items in the frame, and generates a list of ingredients currently in stock. As items are added or removed, HealthWay updates the inventory accordingly, using a video upload such that it can recognize if an item is being placed into the refrigerator or removed from the refrigerator. Based on this updated inventory, it suggests recipes, making meal planning easier and more efficient, through web scraping recipes online. Additionally, HealthWay helps manage health by tracking the user's medications, using prescription labels as a reference, and sending reminders for dosages. User medication data may be submitted through uploading or submitting a photo of the medications. This comprehensive approach ensures users can maintain a balanced diet and adhere to their medication schedules effortlessly.",
           tools: "HealthWay is built as a Next.js React application, integrating a Python backend for its core functionality implemented with FastAPI endpoints. Data storage is managed through a PostgreSQL database on Google Cloud. The frontend design is streamlined using Tailwind CSS, ensuring a responsive and aesthetically pleasing user interface. At its heart, HealthWay employs a Google Cloud visual classification model to accurately identify various types of food and medication. Additionally, it incorporates an AI motion tracking YOLO (You Only Look Once) model on videos submitted to the application, which plays a crucial role in determining whether food items are being added to or removed from a pantry or refrigerator depending on direction of movement. For the feature that suggests recipes based on current inventory, HealthWay leverages the SuperCook API, which crafts meal recommendations from the ingredients listed in the user's inventory, ensuring a seamless and efficient meal planning experience.",
-          link: "https://github.com/Jaren-Bresnick/HealthWay",
+          link: "https://devpost.com/software/nutriview-7ah1l6",
         },
         {
           title: "CliniVision",
@@ -115,7 +115,7 @@ const Projects = React.forwardRef((props, ref) => {
       
       const Portfolio = () => (
           <div>
-            <div className="max-w-6xl mx-auto px-4 lg:mt-8 md:mt-16 sm:mt-42">
+            <div className="max-w-6xl mx-auto px-4 lg:mt-32 md:mt-48 sm:mt-64">
               <h1 className="text-2xl md:text-5xl font-bold text-white mb-12 text-center">Projects</h1>
               <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-14">
                 {projects.map((project) => (
@@ -128,7 +128,7 @@ const Projects = React.forwardRef((props, ref) => {
 
 
     return (
-        <section ref={ref} className="mt-48 sm:mt-8">
+        <section ref={ref} className="sm:mt-8">
             <div className="bg-gray-900 min-h-screen flex justify-center">
                 <Portfolio/>
             </div>
