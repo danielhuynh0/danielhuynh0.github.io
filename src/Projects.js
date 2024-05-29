@@ -13,15 +13,29 @@ const Projects = React.forwardRef((props, ref) => {
           title: 'HealthWay',
           images: ['healthway.png'],
           description: "HealthWay is a versatile kitchen tool and lifestyle app designed to help users manage their food inventory in real time, offering timely updates. We plan to integrate the platform with a real-time sensor/camera, placed into a refrigerator, such that it can automatically track user inventory. Our app starts by allowing the user to take a photo of their fridge, or record a video of the user placing items into the fridge, from which it recognizes the items in the frame, and generates a list of ingredients currently in stock. As items are added or removed, HealthWay updates the inventory accordingly, using a video upload such that it can recognize if an item is being placed into the refrigerator or removed from the refrigerator. Based on this updated inventory, it suggests recipes, making meal planning easier and more efficient, through web scraping recipes online. Additionally, HealthWay helps manage health by tracking the user's medications, using prescription labels as a reference, and sending reminders for dosages. User medication data may be submitted through uploading or submitting a photo of the medications. This comprehensive approach ensures users can maintain a balanced diet and adhere to their medication schedules effortlessly.",
-          tools: "HealthWay is built as a Next.js React application, integrating a Python backend for its core functionality implemented with FastAPI endpoints. Data storage is managed through a PostgreSQL database on Google Cloud. The frontend design is streamlined using Tailwind CSS, ensuring a responsive and aesthetically pleasing user interface. At its heart, HealthWay employs a Google Cloud visual classification model to accurately identify various types of food and medication. Additionally, it incorporates an AI motion tracking YOLO (You Only Look Once) model on videos submitted to the application, which plays a crucial role in determining whether food items are being added to or removed from a pantry or refrigerator depending on direction of movement. For the feature that suggests recipes based on current inventory, HealthWay leverages the SuperCook API, which crafts meal recommendations from the ingredients listed in the user's inventory, ensuring a seamless and efficient meal planning experience.",
+          tools: "HealthWay is built using Next.js, integrating a Python backend for its core functionality implemented with FastAPI endpoints. Data storage is managed through a PostgreSQL database on Google Cloud. It is styled with Tailwind CSS. At its heart, HealthWay employs a Google Cloud visual classification model to accurately identify various types of food and medication. Additionally, it incorporates an AI motion tracking YOLOv5 (You Only Look Once) model on videos submitted to the application, which plays a crucial role in determining whether food items are being added to or removed from a pantry or refrigerator depending on direction of movement (based on bounding box localization). For recipe generation, HealthWay leverages SuperCook API, crafting meal recommendations from the ingredients in the user's inventory.",
           link: "https://devpost.com/software/nutriview-7ah1l6",
         },
         {
           title: "CliniVision",
-          images: ['CliniVision.png'],
+          images: ['clinivision_new.png'],
           description: 'CliniVision is a multifaceted project that seeks to shorten patient wait times within hospital settings. The CliniVision tool\'s final goal is to take in a fresh postanterior chest x-ray and label the x-ray with the symptoms found within the x-ray. Images are first put through a standardization model that corrctly orients, crops, and zooms the image to a standardized coordinate system. These symptoms are identified and localized with a certain location on the image. Using the identified symptoms and their localizations, the tool will output a diagnosis of the patient\'s condition.',
-          tools: "Using Next.js for frontend and the TensorFlow Keras library, we trained a CNN model encapsulating an implementation of a Spatial Transformer to create a standardization model for images, allowing images to be correctly oriented, cropped, and zoomed to a standardized coordinate system. We also used the TensorFlow Keras library to train a CNN model to identify and localize symptoms on the x-ray images. Finally, we are experimenting with different models to output a diagnosis of the patient's condition based on the identified symptoms and their localizations, namely a simple decision tree from the Scikit-Learn library, and a neural network from TensorFlow Keras.",
+          tools: "Using Next.js for frontend and the TensorFlow Keras library, we trained a CNN model encapsulating an implementation of a Spatial Transformer to create a standardization model for images, allowing images to be correctly oriented, cropped, and zoomed to a standardized coordinate system. We also used the TensorFlow Keras library to train a CNN model to identify and localize symptoms on the x-ray images. We also experimented with a YOLOv5 computer vision model as part of detections and classification. Finally, we are experimenting with different models to output a diagnosis of the patient's condition based on the identified symptoms and their localizations, namely a simple decision tree from the Scikit-Learn library, and a neural network from TensorFlow Keras.",
           link: "https://github.com/Project-Code-UVA/CliniVision",
+        },
+        {
+          title: "PlaylistPhantom",
+          images: ['playlistphantom.png'],
+          description: "Generate an entire playlist through just a text description of the music you want! Playlists are created using Google Gemini API to translate user text into song embeddings (following a defined JSON structure). I then used different machine learning algorithms to generate playlists, such as a basic KNN based on Euclidean distance in song embedding feature space to determine best matches for a description. I am working on a Spotify API integration to allow direct addition of the playlist to the user's Spotify account.",
+          tools: "Built with Next.JS frontend, FastAPI backend for API endpoints, and Google Gemini API for song embedding generation. I built different machine learning algorithms with Tensorflow Keras, as well as a KNN algorithm from sci-kit learn.",
+          link: "https://github.com/danielhuynh0/PlaylistPhantom",
+        },
+        {
+          title: "Finetuned LLAMA-2 Mental Health Service",
+          images: ['mentalhealth.png'],
+          description: "We finetuned Meta's LLAMA-2 large language model on publicly-available mental health conversations between licensed therapists and individuals, and experimented on the efficacy and impact of finetuning on different types of models -- LLAMA-2, LLAMA-2 Chat, and soon newly released LLAMA-3. From this, we obtained extremely promising results, and seek to create a web service such that we may expand the access to mental health resources to underserved communities or teens who may lack the ability to pay for such resources and services, especially with mental health affecting over 25% of all adults in the United States.",
+          tools: "We obtained our Counselchat mental health dataset from HuggingFace, and gained access to the LLAMA-2, LLAMA-2 Chat, and LLAMA-3 models from Meta to perform our experiments. In running the finetuning process, we required the PyTorch and HuggingFace's Transfomers libraries.",
+          link: "NLP LLAMA2 Mental Health Platform Paper.pdf",
         },
         {
           title: "Stock Market Bot",
@@ -78,12 +92,6 @@ const Projects = React.forwardRef((props, ref) => {
           tools: "Written with simple HTML/CSS/JavaScript. Makes calls to The Cat API to return the cat image to be displayed.",
           link: "https://danielhuynh0.github.io/my-cat-generator/",
         },
-        {
-          title: "Weather Application",
-          images: [],
-          description: "Allows a user to enter in a location name and see displayed weather data for that location.",
-          tools: "Web app written with React, styled with TailwindCSS. Uses OpenWeatherMap API for the weather data. It is not yet fully completed, but I plan to finish it soon in the future."
-        }
     ];
 
     const ProjectBox = ({ project }) => {
