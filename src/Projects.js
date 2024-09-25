@@ -1,3 +1,4 @@
+import { toHaveAttribute } from "@testing-library/jest-dom/matchers";
 import React from "react";
 
 const Projects = React.forwardRef((props, ref) => {
@@ -25,9 +26,9 @@ const Projects = React.forwardRef((props, ref) => {
         },
         {
           title: "PlaylistPhantom",
-          images: ['playlistphantom.png'],
+          images: ['playlistphantom.png', 'playlistphantomlogo.png'],
           description: "Generate an entire playlist through just a text description of the music you want! Playlists are created using Google Gemini API to translate user text into song embeddings (following a defined JSON structure). I then used different machine learning algorithms to generate playlists, such as a basic KNN based on Euclidean distance in song embedding feature space to determine best matches for a description. I am working on a Spotify API integration to allow direct addition of the playlist to the user's Spotify account.",
-          tools: "Built with Next.JS frontend, FastAPI backend for API endpoints, and Google Gemini API for song embedding generation. I built different machine learning algorithms with Tensorflow Keras, as well as a KNN algorithm from sci-kit learn.",
+          tools: "Built with Next.JS frontend, FastAPI backend for API endpoints, and Google Gemini API for song embedding generation. I built different machine learning algorithms with Tensorflow Keras such as an Autoencoder and Graph-based Neural Network, as well as a KNN algorithm from scikit-learn.",
           link: "https://github.com/danielhuynh0/PlaylistPhantom",
         },
         {
@@ -52,7 +53,7 @@ const Projects = React.forwardRef((props, ref) => {
         },
         {
           title: "HearIt",
-          images: [],
+          images: ['hearit.png'],
           description: "Music social media web app where users can share posts to global & friends-only feed of favorite songs/artists/albums, join communities of similar interests, add friends, like/share comments on posts, and play snippet of song directly from a post. I originally built this app in PHP, but I am rebuilding it in Angular and Django.",
           tools: "Built with Angular frontend, a Django backend, and PostgreSQL database, leveraging Django REST Framework for RESTful API endpoints between client-server, TypeScript, PHP, HTML/CSS. Hosting to be done on Heroku. Leverages the Spotify API for music library and playing of snippets.",
           link: "https://github.com/danielhuynh0/hear-it"
@@ -124,7 +125,7 @@ const Projects = React.forwardRef((props, ref) => {
       const Portfolio = () => (
           <div>
             <div className="max-w-6xl mx-auto px-4 lg:mt-32 md:mt-48 sm:mt-64">
-              <h1 className="text-2xl md:text-5xl font-bold text-white mb-12 text-center">Projects</h1>
+              <h1 className="text-2xl md:text-4xl font-bold text-white mb-12 text-center">Projects</h1>
               <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-14">
                 {projects.map((project) => (
                   <ProjectBox key={project.id} project={project} />

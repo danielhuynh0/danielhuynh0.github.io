@@ -23,10 +23,12 @@ const StartPage = () => {
             alt="Profile Picture"
             className="rounded-full w-40 h-40 object-cover mx-auto mb-8"
           />
-          <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-8">Hello! My name is Daniel Huynh.</h1>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8">Hello! My name is Daniel Huynh.</h1>
           <p className="text-md lg:text-lg md:text-lg sm:text-md text-gray-300 mb-8">
-            I'm a third-year student of computer science at UVA.
-            I love solving puzzles, algorithms, AI and ML, NLP and experimenting with LLMs, IoT, physics, and just building new software! I'm excited to share my journey with you.
+          I'm a software engineer at Johns Hopkins University APL. I recently graduated from UVA in 3 years summa cum laude with a degree in computer science.
+          </p>
+          <p className="text-md lg:text-lg md:text-lg sm:text-md text-gray-300 mb-8">
+          I love solving puzzles, algorithms, AI/ML, NLP and experimenting with LLMs, IoT, physics, and just building new software! (I'm also a huge geography nerd and can stare at Google Earth for hours!) I'm excited to share my journey with you.
           </p>
           <div className="flex justify-center space-x-4">
             <button
@@ -37,10 +39,16 @@ const StartPage = () => {
             </button>
             <button
               onClick={handleClickProjects}
-              className="bg-gray-800 text-white hover:bg-gray-500 rounded-full px-6 py-3 lg:text-lg md:text-lg text-xs font-semibold"
+              className="bg-gray-500 text-white hover:bg-gray-500 rounded-full px-6 py-3 lg:text-lg md:text-lg text-xs font-semibold"
             >
               My Projects
             </button>
+            <a
+              href="DanielHuynh - Resume Fall 2024.pdf"
+              className="bg-gray-800 text-white hover:bg-gray-500 rounded-full px-6 py-3 lg:text-lg md:text-lg text-xs font-semibold"
+            >
+              Resume
+            </a>            
           </div>
         </div>
       </div>
