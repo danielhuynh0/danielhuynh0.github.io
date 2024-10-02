@@ -44,7 +44,7 @@ const StartPage = () => {
               My Projects
             </button>
             <a
-              href="DanielHuynh - Resume Fall 2024.pdf"
+              href="Daniel Huynh - Resume Winter 2024.pdf"
               className="bg-gray-800 text-white hover:bg-gray-500 rounded-full px-6 py-3 lg:text-lg md:text-lg text-xs font-semibold"
             >
               Resume
