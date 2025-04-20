@@ -25,7 +25,7 @@ const StartPage = () => {
           />
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8">Hello! My name is Daniel Huynh.</h1>
           <p className="text-md lg:text-lg md:text-lg sm:text-md text-gray-300 mb-8">
-          I'm a software engineer at Johns Hopkins University APL. I recently graduated from UVA in 3 years summa cum laude with a degree in computer science.
+          I'm a software engineer at Johns Hopkins University Applied Physics Laboratory. I recently graduated from UVA in 3 years summa cum laude with a degree in computer science.
           </p>
           <p className="text-md lg:text-lg md:text-lg sm:text-md text-gray-300 mb-8">
           I love solving puzzles, algorithms, AI/ML, NLP and experimenting with LLMs, IoT, physics, and just building new software! (I'm also a huge geography nerd and can stare at Google Earth for hours!) I'm excited to share my journey with you.
