@@ -1,8 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const AboutMe = React.forwardRef((props, ref) => {
   return (
-    <section ref={ref} className="bg-gray-900">
+    <motion.section
+      ref={ref}
+      className="bg-gray-900"
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="max-w-2xl mx-auto px-4 text-center py-16">
         <h1 className="text-2xl md:text-4xl font-bold text-white mb-8">About Me</h1>
         <p className="text-md lg:text-lg md:text-lg sm:text-md text-gray-300 mb-8">
@@ -26,10 +34,10 @@ const AboutMe = React.forwardRef((props, ref) => {
           Two of the most important things that my parents have always taught me from their childhood and life experiences were the importance of a good attitude and a good work ethic, two things of which I strive to achieve in my work everyday as a student, both at UVA, and as a student of life.
         </p>
       </div>
-      <div className="flex justify-center pb-16 space-x-4">
+      <div className="flex justify-center pb-16 space-x-4 relative z-10">
         <a
           href="https://www.floodwatch.io/"
-          className="bg-white text-gray-900 hover:bg-gray-100 rounded-full px-6 py-3 lg:text-lg md:text-lg text-xs font-semibold"
+          className="bg-white text-gray-900 hover:bg-gray-200 rounded-full px-6 py-3 lg:text-lg md:text-lg text-xs font-semibold"
         >
           Floodwatch
         </a>
@@ -40,7 +48,7 @@ const AboutMe = React.forwardRef((props, ref) => {
           Ansys STK
         </a>
       </div>
-    </section>
+    </motion.section>
   );
 });
 

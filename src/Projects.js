@@ -1,5 +1,5 @@
-import { toHaveAttribute } from "@testing-library/jest-dom/matchers";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Projects = React.forwardRef((props, ref) => {
     const projects = [
@@ -97,7 +97,14 @@ const Projects = React.forwardRef((props, ref) => {
 
     const ProjectBox = ({ project }) => {
         return (
-          <div className="bg-white rounded-lg p-6 shadow-md mb-6">
+          <motion.div
+            className="bg-white rounded-lg p-6 shadow-md mb-6 hover:shadow-xl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.03 }}
+          >
             <div className="flex flex-row justify-center">
             {
               project.images.map((image, i) => (
@@ -118,14 +125,21 @@ const Projects = React.forwardRef((props, ref) => {
                   className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4"
                 >Visit</a>)}
             </div>
-          </div>
+          </motion.div>
         );
       };
       
       const Portfolio = () => (
           <div>
-            <div className="max-w-6xl mx-auto px-4 lg:mt-32 md:mt-48 sm:mt-64">
-              <h1 className="text-2xl md:text-4xl font-bold text-white mb-12 text-center">Projects</h1>
+            <div className="max-w-6xl mx-auto px-4 lg:mt-32 md:mt-48 sm:mt-64 relative z-10">
+              <motion.h1
+                className="text-2xl md:text-4xl font-bold text-white mb-12 text-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+              >
+                Projects
+              </motion.h1>
               <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-14">
                 {projects.map((project) => (
                   <ProjectBox key={project.id} project={project} />
