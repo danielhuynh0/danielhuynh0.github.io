@@ -17,17 +17,11 @@ const AboutMe = React.forwardRef((props, ref) => {
           I was born in Philadelphia, Pennsylvania. I have spent most of my life in the Philadelphia area, as I graduated from Phoenixville Area High School with Distinguished Honors with the class of 2021. My family immigrated from Vietnam as refugees shortly before I was born, and I am proudly the first of my extended family to be born in the United States, hoping to carry on their legacy.
         </p>
         <p className="text-md lg:text-lg md:text-lg sm:text-md text-gray-300 mb-8">
+          At JHU APL, I work on two major software projects, taking a key role in development of a network security monitoring software and a web-based systems mission dependency modeling software.
+          I am also conducting funded research in machine learning for applications to cybersecurity and network security. I use Java, React, SpringBoot, and Angular in my work.
+        </p>
+        <p className="text-md lg:text-lg md:text-lg sm:text-md text-gray-300 mb-8">
           I previously was a SWE intern at Ansys, an engineering simulation software company. I helped spearhead the complete re-architecture of the flagship AGI products for Ansys (STK and ODTK) on .NET using C#, C++, and WPF.
-        </p>
-        <p className="text-md lg:text-lg md:text-lg sm:text-md text-gray-300 mb-8">
-          I also previously worked as a researcher in the CS Department of UVA for the Floodwatch project under Professor Rich Nguyen, a project funded by the National Science Foundation.
-          As a researcher, I was in charge of LiDAR research and its applications for flood detection sensors and water depth mapping.
-          I developed a prototype heavily critical to our team and to our partners in the government of the City of Da Nang.
-        </p>
-        <p className="text-md lg:text-lg md:text-lg sm:text-md text-gray-300 mb-8">
-          Additionally, I was also a member of the Cavalier Autonomous Racing Team, researching the development of autonomous vehicles in both perception and motion planning.
-          My work in perception involves integrating ground segmentation algorithms for 3D LiDAR point clouds (predicting the classification of points).
-          In conjunction, my work in motion planning involves developing a path planning algorithm for the vehicle to follow experimenting different graph search algorithms on constructed spatio-temporal graphs.
         </p>
         <p className="text-md lg:text-lg md:text-lg sm:text-md text-gray-300 mb-8">
           Some things I love doing outside of school are working on projects, as well as running (cross country and track) and playing soccer.
