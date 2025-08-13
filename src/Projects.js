@@ -6,32 +6,70 @@ const Projects = React.forwardRef((props, ref) => {
         {
             title: 'Budget Buddy',
             images: ['BudgetBuddyLogo.png'],
-            description: "Winner of Capital One's Best Finance Hack at UVa HooHacks 2023, Budget Buddy is a personal finance budgeting app. Our app allows users to create an account or login to an existing account with their saved budgeting plans. If it is their first time creating an account, we allow the user to make their own budgeting plan, either by manually allocating a budget to each “bucket” or category of planning, or instead specifying a total budget to allocate, of which our algorithm will automatically allocate to each category based on the recommendations of financial experts for the user. After submitting the budgeting plan, the user can connect their back account to our app through the Plaid API interface."+
-            "This provides our app access to the user’s previous transaction history, and can build and update the budgeting plan as time goes by and the user makes progress on spending. When the user has connected their bank account, they will be able to see a dashboard with plots that will summarize and display their spending data from the current month. However, the user will not have to log online to manage their finances– through Twilio, the user can also have SMS text messaging conversations with our app’s personal chatbot. The user can ask our chatbot for help when facing a financial decision, and our chatbot will use previous transactional data as well as the user’s current progress on their budgeting plan to help recommend a decision to be made. In addition, the user can ask clarifying questions to help better understand their current budgeting progress, and learn and practice how to improve for the future. Learning personal budgeting is a major step at financial literacy.",
-            tools: "We built the frontend using HTML/CSS/JavaScript and used Plotly to generate the plots from the spending data, the backend web server was created using Flask, SMS messaging was handled by Twilio API, user’s transactions were retrieved using the Plaid API, and the GPT API was used to generate the user spending improvements and suggestions chatbot.",
+            description: "Winner of Capital One's Best Finance Hack at UVa HooHacks 2023, Budget Buddy is a personal finance budgeting app. "+
+            "This app allows users to create an account or login to an existing account with their saved budgeting plans. If it is their first time creating an account, "+
+            "the app allows the user to make their own budgeting plan, either by manually allocating a budget to each “bucket” or category of planning, or instead specifying "+
+            "a total budget to allocate, of which our algorithm will automatically allocate to each category based on the recommendations of financial experts for the user. "+
+            "After submitting the budgeting plan, the user can connect their back account to the app through the Plaid API interface. This provides the app access to the user’s "+
+            "previous transaction history, and can build/update the budgeting plan as time goes by and the user makes progress on spending. When the user has connected their bank "+
+            "account, they will be able to see a dashboard with plots that will summarize and display their spending data from the current month. However, the user will not have to log "+
+            "online to manage their finances through Twilio, as the user can also have SMS text messaging conversations with the app’s personal chatbot. The user can ask the chatbot for help "+
+            "when facing a financial decision, and the chatbot will use previous transactional data as well as the user’s current progress on their budgeting plan to help recommend a "+
+            "decision to be made. In addition, the user can ask clarifying questions to help better understand their current budgeting progress, and learn and practice how to improve "+
+            "for the future. This enables better financial literacy for all, especially for us as students.",
+            tools: "Built the frontend using HTML/CSS/JavaScript and used Plotly to generate the plots from the spending data. "+
+            "The backend web server was created using Flask, SMS messaging was handled by Twilio API, user’s transactions were retrieved using the Plaid API, and "+
+            "the GPT API was used to generate the user spending improvements and suggestions chatbot.",
             link: "https://devpost.com/software/budgetbuddy-wz0mh2",
+        },
+        {
+          title: 'IRIS',
+          images: ['iris logo.png', 'iris ui.png'],
+          description: "An autonomous robot to fight against invasive species in agriculture, using computer vision and Boston Dynamic's Spot robot! "+
+          "Iris is an autonomous quadrupedal robot that can walk around farmland and agricultural areas, and using computer vision, detect and interact"+
+          "with weeds and invasive plant species that could harm crops and agricultural outputs from farms. With strong performance in its detections, it"+
+          "can be deployed at farms across the country, greatly saving time and energy for busy farmers, improving agricultural production in a safe and sustainable manner,"+
+          "especially replacing the need for widespread use of pesticides in our crops.",
+          tools: "ROS 2, C++, MobileNet CV model built using TensorFlow Keras trained on DeepWeeds dataset, Gazebo for simulation, RViz, Python, and Docker to build our own Ubuntu 22.04 image, as the simulation and development process required a Linux environment.",
+          link: "https://devpost.com/software/iris-hoilnb",
         },
         {
           title: 'HealthWay',
           images: ['healthway.png'],
-          description: "HealthWay is a versatile kitchen tool and lifestyle app designed to help users manage their food inventory in real time, offering timely updates. We plan to integrate the platform with a real-time sensor/camera, placed into a refrigerator, such that it can automatically track user inventory. Our app starts by allowing the user to take a photo of their fridge, or record a video of the user placing items into the fridge, from which it recognizes the items in the frame, and generates a list of ingredients currently in stock. As items are added or removed, HealthWay updates the inventory accordingly, using a video upload such that it can recognize if an item is being placed into the refrigerator or removed from the refrigerator. Based on this updated inventory, it suggests recipes, making meal planning easier and more efficient, through web scraping recipes online. Additionally, HealthWay helps manage health by tracking the user's medications, using prescription labels as a reference, and sending reminders for dosages. User medication data may be submitted through uploading or submitting a photo of the medications. This comprehensive approach ensures users can maintain a balanced diet and adhere to their medication schedules effortlessly.",
+          description: "HealthWay is a versatile kitchen tool and lifestyle app designed to help users manage their food inventory in real time, offering timely updates. "+
+          "We plan to integrate the platform with a real-time sensor/camera, placed into a refrigerator, such that it can automatically track user inventory. Our app starts "+
+          "by allowing the user to take a photo of their fridge, or record a video of the user placing items into the fridge, from which it recognizes the items in the frame, and "+
+          "generates a list of ingredients currently in stock. As items are added or removed, HealthWay updates the inventory accordingly, using a video upload such that it can recognize "+
+          "if an item is being placed into the refrigerator or removed from the refrigerator. Based on this updated inventory, it suggests recipes, making meal planning easier and more "+
+          "efficient, through web scraping recipes online. Additionally, HealthWay helps manage health by tracking the user's medications, using prescription labels as a reference, and "+
+          "sending reminders for dosages. User medication data may be submitted through uploading or submitting a photo of the medications. This comprehensive approach ensures users can "+
+          "maintain a balanced diet and adhere to their medication schedules effortlessly.",
           tools: "HealthWay is built using Next.js, integrating a Python backend for its core functionality implemented with FastAPI endpoints. Data storage is managed through a PostgreSQL database on Google Cloud. It is styled with Tailwind CSS. At its heart, HealthWay employs a Google Cloud visual classification model to accurately identify various types of food and medication. Additionally, it incorporates an AI motion tracking YOLOv5 (You Only Look Once) model on videos submitted to the application, which plays a crucial role in determining whether food items are being added to or removed from a pantry or refrigerator depending on direction of movement (based on bounding box localization). For recipe generation, HealthWay leverages SuperCook API, crafting meal recommendations from the ingredients in the user's inventory.",
           link: "https://devpost.com/software/nutriview-7ah1l6",
         },
         {
-          title: "CliniVision",
-          images: ['clinivision_new.png'],
-          description: 'CliniVision is a multifaceted project that seeks to shorten patient wait times within hospital settings. The CliniVision tool\'s final goal is to take in a fresh postanterior chest x-ray and label the x-ray with the symptoms found within the x-ray. Images are first put through a standardization model that corrctly orients, crops, and zooms the image to a standardized coordinate system. These symptoms are identified and localized with a certain location on the image. Using the identified symptoms and their localizations, the tool will output a diagnosis of the patient\'s condition.',
-          tools: "Using Next.js for frontend and the TensorFlow Keras library, we trained a CNN model encapsulating an implementation of a Spatial Transformer to create a standardization model for images, allowing images to be correctly oriented, cropped, and zoomed to a standardized coordinate system. We also used the TensorFlow Keras library to train a CNN model to identify and localize symptoms on the x-ray images. We also experimented with a YOLOv5 computer vision model as part of detections and classification. Finally, we are experimenting with different models to output a diagnosis of the patient's condition based on the identified symptoms and their localizations, namely a simple decision tree from the Scikit-Learn library, and a neural network from TensorFlow Keras.",
-          link: "https://github.com/Project-Code-UVA/CliniVision",
+          title: "Spotify Miniplayer for Google Chrome",
+          images: ['spotify-miniplayer.png'],
+          description: "Control your music directly in your browser without ever having to change tabs or take out your phone! I made this one night because I was very focused working, "+
+          "but kept having to switch back and forth to change the songs playing from my Spotify DJ. As such, I procrastinated on work by creating this tool instead (haha), enabling me to avoid lots "+
+          "of inconvenience in the future. I actively use this tool, and have shared it with friends to use as well! This tool will prompt the user to connect to their Spotify account, handle authentication, "+
+          "persist the authentication in local storage in browser such that when a user closes a tab or a window, opening a new one will still keep the user logged in. It will also directly control the user's "+
+          "playback on Spotify, as interacting with this miniplayer directly affects the music playing on your account, and in your headphones.",
+          tools: "Built with Spotify API, with UI built purely with JavaScript, HTML, CSS, generated icons from GPT, and on Google Chrome Developer Mode. I learned PKCE authentication for sending secure requests to Spotify.",
+          link: "https://github.com/danielhuynh0/spotify-chrome-miniplayer",
         },
         {
-          title: "Spotify Miniplayer Chrome Extension",
-          images: ['spotify-chrome-miniplayer.png'],
-          description: 'I always listen to music while working. This means spending lots of hours with Google Chrome open. However, each time I want to check what song is currently playing, I have to manually open my Spotify app to check. To skip from my computer, or to rewind, I also have to open my Spotify app.'+
-          'This extension allows me to see the music currently playing, pause, rewind, and skip without having to take my hands off of my mouse. As part of this project, I got to learn how to enable Chrome to run my extension, as well as the use of PKCE authentication to provide secure access to Spotify accounts.',
-          tools: "JavaScript, Spotify API, PKCE authentication, Google Chrome for Developer Tools",
-          link: "https://github.com/danielhuynh0/spotify-chrome-miniplayer",
+          title: "CliniVision",
+          images: ['clinivision_new.png'],
+          description: 'CliniVision is a multifaceted project that seeks to shorten patient wait times within hospital settings. The CliniVision tool\'s final goal is to take in a fresh postanterior '+
+          'chest x-ray and label the x-ray with the symptoms found within the x-ray. Images are first put through a standardization model that corrctly orients, crops, and zooms the image to a '+
+          'standardized coordinate system. These symptoms are identified and localized with a certain location on the image. Using the identified symptoms and their localizations, '+
+          'the tool will output a diagnosis of the patient\'s condition.',
+          tools: "Using Next.js for frontend and the TensorFlow Keras library, we trained a CNN model encapsulating an implementation of a Spatial Transformer to create a standardization "+
+          "model for images, allowing images to be correctly oriented, cropped, and zoomed to a standardized coordinate system. We also used the TensorFlow Keras library to train a CNN model "+
+          "to identify and localize symptoms on the x-ray images. We also experimented with a YOLOv5 computer vision model as part of detections and classification. Finally, we are experimenting "+
+          "with different models to output a diagnosis of the patient's condition based on the identified symptoms and their localizations, namely a simple decision tree from the Scikit-Learn library, and a neural network from TensorFlow Keras.",
+          link: "https://github.com/Project-Code-UVA/CliniVision",
         },
         {
           title: "PlaylistPhantom",
