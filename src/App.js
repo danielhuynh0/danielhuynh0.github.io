@@ -2,7 +2,7 @@ import './App.css';
 import StartPage from './StartPage';
 
 function App() {
-  return <div className='bg-gray-950'>
+  return <div style={{ background: '#060410' }}>
     <StartPage />
   </div>;
 };

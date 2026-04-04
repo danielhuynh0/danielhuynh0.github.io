@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
-import ParticleBackground from './backgrounds/ParticleBackground';
+import ShaderBackground from './components/ui/ShaderBackground';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
 
@@ -19,63 +19,63 @@ const StartPage = () => {
   };
 
   const skills = [
-    'Python', 'Java', 'React', 'Machine Learning',
-    'TensorFlow', 'C++', 'Next.js', 'SpringBoot', 'NLP', 'Computer Vision',
+    'Java', 'Python', 'Angular', 'SpringBoot', 'React', 'Machine Learning',
+    'TensorFlow', 'AWS', 'Cloud Computing', 'Docker', 'C++', 'Next.js', 'NLP', 'CI/CD'
   ];
 
   return (
     <div className="relative">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800/50">
+      <ShaderBackground />
+
+      <nav className="fixed top-0 left-0 right-0 z-50" style={{ background: 'rgba(6,4,16,0.75)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(139,92,246,0.15)' }}>
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="font-bold text-lg bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            Daniel Huynh
+          <span className="font-bold text-base tracking-tight text-white">
+            daniel<span className="text-violet-400">huynh</span>
           </span>
-          <div className="hidden sm:flex items-center space-x-6">
+          <div className="hidden sm:flex items-center gap-7">
             <button
               onClick={handleClickAbout}
-              className="text-gray-300 hover:text-white text-sm transition-colors"
+              className="text-gray-400 hover:text-white text-sm transition-colors tracking-wide"
             >
-              About
+              about
             </button>
             <button
               onClick={handleClickProjects}
-              className="text-gray-300 hover:text-white text-sm transition-colors"
+              className="text-gray-400 hover:text-white text-sm transition-colors tracking-wide"
             >
-              Projects
+              projects
             </button>
             <a
               href="Daniel Huynh - Resume.pdf"
-              className="bg-blue-500 hover:bg-blue-600 text-white text-sm px-4 py-2 rounded-full transition-colors font-medium"
+              className="text-sm px-4 py-1.5 rounded border border-violet-500/50 text-violet-300 hover:bg-violet-500/10 transition-colors tracking-wide"
             >
-              Resume
+              resume
             </a>
           </div>
         </div>
       </nav>
 
-      <div className="hidden lg:block absolute inset-0 z-0 pointer-events-none">
-        <ParticleBackground />
-      </div>
-
-      <div className="bg-gray-950 min-h-screen flex flex-col justify-center pt-16">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 py-16 relative z-10">
+      <div className="min-h-screen flex flex-col justify-center pt-16" style={{ background: 'transparent' }}>
+        <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-16 py-20 relative z-10">
 
           <motion.div
             className="flex-1 text-center lg:text-left"
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="text-blue-400 font-medium mb-3 text-xs tracking-widest uppercase">
-              Welcome to my portfolio
+            <p className="text-violet-400 text-sm font-mono tracking-widest uppercase mb-4 opacity-80">
+              software engineer
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-              Hi, I&apos;m{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Daniel Huynh
+
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-5 leading-none tracking-tight">
+              Daniel<br />
+              <span style={{ WebkitTextStroke: '1px rgba(167,139,250,0.6)', color: 'transparent' }}>
+                Huynh
               </span>
             </h1>
-            <h2 className="text-xl md:text-2xl font-semibold text-blue-400 mb-6 min-h-[2rem]">
+
+            <div className="text-lg md:text-xl text-violet-300/80 mb-7 min-h-[1.75rem] font-light">
               <Typewriter
                 words={[
                   'Software Engineer @ JHU APL',
@@ -86,115 +86,128 @@ const StartPage = () => {
                 loop={0}
                 cursor
                 cursorStyle="|"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1000}
+                typeSpeed={65}
+                deleteSpeed={45}
+                delaySpeed={1200}
               />
-            </h2>
-            <p className="text-gray-300 text-lg mb-4 leading-relaxed">
-              I&apos;m a software engineer at Johns Hopkins University Applied Physics Laboratory. I currently attend
-              Johns Hopkins University for my MSCS with a concentration in AI. I recently graduated from UVA in 3 years
-              summa cum laude with a degree in computer science.
+            </div>
+
+            <p className="text-gray-300 text-base mb-3 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              Software engineer at JHU Applied Physics Laboratory, while pursuing my MSCS at Johns Hopkins University 
+              with a concentration in AI. CS grad from UVA in 3 years, summa cum laude.
             </p>
-            <p className="text-gray-400 mb-8 leading-relaxed">
-              I love solving puzzles, algorithms, ML, Agentic AI, NLP, IoT, physics, and just building new software!
-              (I&apos;m also a huge geography nerd and can stare at Google Earth for hours!) I&apos;m excited to share
-              my journey with you.
+            <p className="text-gray-500 text-sm mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              I love building things, puzzles, ML, AI, and physics. I'm also a geography
+              nerd and can stare at Google Earth for hours.
             </p>
 
-            <div className="flex flex-wrap gap-2 mb-8 justify-center lg:justify-start">
+            <div className="flex flex-wrap gap-1.5 mb-9 justify-center lg:justify-start">
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="text-xs px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300"
+                  className="text-xs px-2.5 py-1 rounded-sm font-mono"
+                  style={{
+                    background: 'rgba(109,40,217,0.12)',
+                    border: '1px solid rgba(139,92,246,0.25)',
+                    color: 'rgba(196,181,253,0.85)',
+                  }}
                 >
                   {skill}
                 </span>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-              <div className="flex space-x-3">
+            <div className="flex flex-wrap items-center gap-4 justify-center lg:justify-start">
+              <div className="flex gap-2.5">
                 <a
                   href="https://www.linkedin.com/in/danielhuynh523"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded-full bg-gray-800 hover:bg-blue-500/20 border border-gray-700 hover:border-blue-500/50 transition-all group"
+                  className="p-2.5 rounded-lg transition-all"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
+                  onMouseEnter={e => e.currentTarget.style.background = 'rgba(109,40,217,0.2)'}
+                  onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
                 >
-                  <FaLinkedin className="text-gray-300 group-hover:text-blue-400 transition-colors" size={18} />
+                  <FaLinkedin className="text-gray-400 hover:text-violet-300 transition-colors" size={16} />
                 </a>
                 <a
                   href="https://github.com/danielhuynh0"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded-full bg-gray-800 hover:bg-gray-700 border border-gray-700 transition-all"
+                  className="p-2.5 rounded-lg transition-all"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
+                  onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.09)'}
+                  onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
                 >
-                  <FaGithub className="text-gray-300" size={18} />
+                  <FaGithub className="text-gray-400" size={16} />
                 </a>
                 <a
                   href="mailto:danielhuynh523@gmail.com"
-                  className="p-2.5 rounded-full bg-gray-800 hover:bg-red-500/20 border border-gray-700 hover:border-red-500/50 transition-all group"
+                  className="p-2.5 rounded-lg transition-all"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
+                  onMouseEnter={e => e.currentTarget.style.background = 'rgba(109,40,217,0.2)'}
+                  onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
                 >
-                  <FaEnvelope className="text-gray-300 group-hover:text-red-400 transition-colors" size={18} />
+                  <FaEnvelope className="text-gray-400 hover:text-violet-300 transition-colors" size={16} />
                 </a>
               </div>
-              <div className="flex space-x-3">
-                <button
-                  onClick={handleClickAbout}
-                  className="bg-white text-gray-900 hover:bg-gray-100 rounded-full px-5 py-2.5 font-semibold text-sm transition-colors"
-                >
-                  About Me
-                </button>
-                <button
-                  onClick={handleClickProjects}
-                  className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-full px-5 py-2.5 font-semibold text-sm transition-all shadow-lg shadow-blue-500/20"
-                >
-                  View Projects
-                </button>
-              </div>
+
+              <button
+                onClick={handleClickAbout}
+                className="text-sm px-5 py-2 rounded-lg text-white transition-colors font-medium"
+                style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.1)' }}
+                onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.12)'}
+                onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.07)'}
+              >
+                about me
+              </button>
+              <button
+                onClick={handleClickProjects}
+                className="text-sm px-5 py-2 rounded-lg text-white font-medium transition-all"
+                style={{ background: 'rgba(109,40,217,0.5)', border: '1px solid rgba(139,92,246,0.5)' }}
+                onMouseEnter={e => e.currentTarget.style.background = 'rgba(109,40,217,0.7)'}
+                onMouseLeave={e => e.currentTarget.style.background = 'rgba(109,40,217,0.5)'}
+              >
+                view projects
+              </button>
             </div>
           </motion.div>
 
           <motion.div
             className="flex-shrink-0"
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-2xl opacity-25 scale-110" />
+              <div
+                className="absolute inset-0 rounded-full blur-3xl opacity-30 scale-110"
+                style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.8) 0%, rgba(76,29,149,0.4) 60%, transparent 100%)' }}
+              />
               <img
                 src="linkedin image.jpg"
                 alt="Daniel Huynh"
-                className="relative rounded-full w-56 h-56 lg:w-72 lg:h-72 object-cover border-2 border-blue-500/30 shadow-2xl shadow-blue-500/20"
+                className="relative rounded-full object-cover shadow-2xl"
+                style={{
+                  width: '17rem',
+                  height: '17rem',
+                  border: '1px solid rgba(139,92,246,0.3)',
+                  boxShadow: '0 0 60px rgba(109,40,217,0.25)',
+                }}
               />
             </div>
           </motion.div>
         </div>
 
+        {/* Scroll hint */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="max-w-3xl mx-auto px-6 pb-12 w-full relative z-10"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 z-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.4 }}
+          transition={{ delay: 1.5, duration: 1 }}
         >
-          <div className="grid grid-cols-3 bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-5">
-            {[
-              { value: '14+', label: 'Projects Built' },
-              { value: 'JHU APL', label: 'Current Employer' },
-              { value: 'Summa Cum Laude', label: 'UVA Class of 2024' },
-            ].map((stat, i) => (
-              <div
-                key={stat.label}
-                className={`text-center ${i < 2 ? 'border-r border-gray-700/50' : ''}`}
-              >
-                <div className="text-sm sm:text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  {stat.value}
-                </div>
-                <div className="text-gray-400 text-xs mt-1">{stat.label}</div>
-              </div>
-            ))}
-          </div>
+          <span className="text-xs text-gray-500 tracking-widest uppercase font-mono">scroll</span>
+          <div className="w-px h-8 bg-gradient-to-b from-violet-500/50 to-transparent" />
         </motion.div>
       </div>
 

@@ -2,12 +2,21 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const CATEGORY_STYLES = {
-  "Hackathon Winner": "bg-yellow-500/15 border-yellow-500/40 text-yellow-300",
-  "Hackathon":        "bg-orange-500/15 border-orange-500/40 text-orange-300",
-  "Research":         "bg-purple-500/15 border-purple-500/40 text-purple-300",
-  "Team Project":     "bg-green-500/15 border-green-500/40 text-green-300",
-  "Personal":         "bg-blue-500/15 border-blue-500/40 text-blue-300",
-  "Academic":         "bg-gray-500/15 border-gray-500/40 text-gray-300",
+  "Hackathon Winner": "text-amber-300",
+  "Hackathon":        "text-orange-300",
+  "Research":         "text-violet-300",
+  "Team Project":     "text-emerald-300",
+  "Personal":         "text-sky-300",
+  "Academic":         "text-gray-400",
+};
+
+const CATEGORY_DOT = {
+  "Hackathon Winner": "bg-amber-400",
+  "Hackathon":        "bg-orange-400",
+  "Research":         "bg-violet-400",
+  "Team Project":     "bg-emerald-400",
+  "Personal":         "bg-sky-400",
+  "Academic":         "bg-gray-500",
 };
 
 const Projects = React.forwardRef((_props, ref) => {
@@ -187,50 +196,53 @@ const Projects = React.forwardRef((_props, ref) => {
 
   const ProjectCard = ({ project }) => {
     const categoryStyle = CATEGORY_STYLES[project.category] || CATEGORY_STYLES["Personal"];
+    const dotStyle = CATEGORY_DOT[project.category] || CATEGORY_DOT["Personal"];
 
     return (
       <motion.div
-        className="bg-gray-800/50 border border-gray-700/50 rounded-2xl overflow-hidden flex flex-col hover:border-gray-600/70 transition-colors group"
+        className="rounded-xl overflow-hidden flex flex-col group"
+        style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(139,92,246,0.15)' }}
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
         transition={{ duration: 0.5 }}
-        whileHover={{ y: -4 }}
+        whileHover={{ y: -3 }}
+        onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(139,92,246,0.35)'}
+        onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(139,92,246,0.15)'}
       >
-        <div className="h-0.5 w-full bg-gradient-to-r from-blue-500 to-cyan-500" />
-
         {project.images && project.images.length > 0 && (
-          <div className="flex items-center justify-center gap-4 px-6 pt-6 bg-gray-900/40">
+          <div className="flex items-center justify-center gap-4 px-6 pt-6" style={{ background: 'rgba(0,0,0,0.2)' }}>
             {project.images.map((img, i) => (
               <img
                 key={i}
                 src={img}
                 alt={project.title}
-                className="h-24 w-auto object-contain"
+                className="h-20 w-auto object-contain opacity-90"
               />
             ))}
           </div>
         )}
 
-        <div className="p-6 flex flex-col flex-1">
-          <div className="mb-3">
-            <span
-              className={`inline-block text-xs px-2.5 py-0.5 rounded-full border font-medium mb-2 ${categoryStyle}`}
-            >
+        <div className="p-5 flex flex-col flex-1">
+          <div className="mb-3 flex items-center gap-2">
+            <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${dotStyle}`} />
+            <span className={`text-xs font-mono tracking-wide ${categoryStyle}`}>
               {project.category}
             </span>
-            <h3 className="text-lg font-bold text-white leading-snug">{project.title}</h3>
           </div>
+
+          <h3 className="text-base font-semibold text-white mb-2 leading-snug tracking-tight">{project.title}</h3>
 
           <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
             {project.description}
           </p>
 
-          <div className="flex flex-wrap gap-1.5 mb-4">
+          <div className="flex flex-wrap gap-1 mb-4">
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs px-2 py-0.5 rounded bg-gray-700/60 border border-gray-600/50 text-gray-300"
+                className="text-xs px-2 py-0.5 rounded-sm font-mono"
+                style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', color: 'rgba(156,163,175,0.8)' }}
               >
                 {tag}
               </span>
@@ -243,10 +255,9 @@ const Projects = React.forwardRef((_props, ref) => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors group-hover:underline"
+                className="inline-flex items-center gap-1 text-xs font-mono text-violet-400/70 hover:text-violet-300 transition-colors"
               >
-                View Project
-                <span className="text-xs">→</span>
+                view project →
               </a>
             </div>
           )}
@@ -256,7 +267,7 @@ const Projects = React.forwardRef((_props, ref) => {
   };
 
   return (
-    <section ref={ref} className="bg-gray-950 py-24 border-t border-gray-800/50">
+    <section ref={ref} className="py-24" style={{ background: 'rgba(6,4,16,0.92)', borderTop: '1px solid rgba(139,92,246,0.12)' }}>
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -265,11 +276,13 @@ const Projects = React.forwardRef((_props, ref) => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Projects</h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full mb-6" />
-          <div className="flex flex-wrap justify-center gap-2">
-            {Object.entries(CATEGORY_STYLES).map(([label, style]) => (
-              <span key={label} className={`text-xs px-2.5 py-0.5 rounded-full border ${style}`}>
+          <p className="text-violet-400 text-xs font-mono tracking-widest uppercase mb-3 opacity-70">work</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Projects</h2>
+          <div className="w-12 h-px bg-violet-500/50 mx-auto mb-6" />
+          <div className="flex flex-wrap justify-center gap-3">
+            {Object.entries(CATEGORY_STYLES).map(([label]) => (
+              <span key={label} className={`flex items-center gap-1.5 text-xs font-mono ${CATEGORY_STYLES[label]}`}>
+                <span className={`w-1.5 h-1.5 rounded-full ${CATEGORY_DOT[label]}`} />
                 {label}
               </span>
             ))}
