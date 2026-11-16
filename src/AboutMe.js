@@ -71,7 +71,7 @@ const AboutMe = React.forwardRef((_props, ref) => {
   ];
 
   return (
-    <section ref={ref} className="py-24" style={{ background: 'rgba(6,4,16,0.88)', borderTop: '1px solid rgba(139,92,246,0.12)' }}>
+    <section ref={ref} className="py-24" style={{ background: 'rgba(4,8,20,0.88)', borderTop: '1px solid rgba(66,133,244,0.12)' }}>
       <div className="max-w-5xl mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -80,9 +80,9 @@ const AboutMe = React.forwardRef((_props, ref) => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-violet-400 text-xs font-mono tracking-widest uppercase mb-3 opacity-70">background</p>
+          <p className="text-blue-400 text-xs font-mono tracking-widest uppercase mb-3 opacity-70">background</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">About Me</h2>
-          <div className="w-12 h-px bg-violet-500/50 mx-auto" />
+          <div className="w-12 h-px bg-blue-500/50 mx-auto" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -116,7 +116,7 @@ const AboutMe = React.forwardRef((_props, ref) => {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <h3 className="text-white font-semibold text-base mb-4 flex items-center gap-2 tracking-wide">
-                <FaGraduationCap className="text-violet-400" size={14} />
+                <FaGraduationCap className="text-blue-400" size={14} />
                 Education
               </h3>
               <div className="space-y-3">
@@ -124,16 +124,16 @@ const AboutMe = React.forwardRef((_props, ref) => {
                   <div
                     key={edu.school}
                     className="rounded-lg p-4 transition-colors"
-                    style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(139,92,246,0.15)' }}
-                    onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(139,92,246,0.35)'}
-                    onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(139,92,246,0.15)'}
+                    style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(66,133,244,0.15)' }}
+                    onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(66,133,244,0.35)'}
+                    onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(66,133,244,0.15)'}
                   >
                     <div className="flex justify-between items-start flex-wrap gap-2">
                       <div>
                         <p className="text-white font-semibold">{edu.school}</p>
                         <p className="text-gray-400 text-sm mt-0.5">{edu.degree}</p>
                         {edu.note && (
-                          <p className="text-violet-400/70 text-xs mt-1 leading-relaxed">{edu.note}</p>
+                          <p className="text-blue-400/70 text-xs mt-1 leading-relaxed">{edu.note}</p>
                         )}
                       </div>
                       <span className="text-gray-500 text-xs font-mono whitespace-nowrap">
@@ -151,7 +151,7 @@ const AboutMe = React.forwardRef((_props, ref) => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h3 className="text-white font-semibold text-base mb-4 flex items-center gap-2 tracking-wide">
-                <FaFlask className="text-violet-400/80" size={14} />
+                <FaFlask className="text-blue-400/80" size={14} />
                 Research
               </h3>
               <div className="space-y-4">
@@ -159,14 +159,14 @@ const AboutMe = React.forwardRef((_props, ref) => {
                   <div
                     key={r.company + r.period}
                     className="rounded-lg p-5 transition-colors"
-                    style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(139,92,246,0.15)' }}
-                    onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(139,92,246,0.35)'}
-                    onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(139,92,246,0.15)'}
+                    style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(66,133,244,0.15)' }}
+                    onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(66,133,244,0.35)'}
+                    onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(66,133,244,0.15)'}
                   >
                     <div className="flex justify-between items-start flex-wrap gap-2 mb-2">
                       <div>
                         <p className="text-white font-medium text-sm">{r.role}</p>
-                        <p className="text-violet-400/70 text-xs mt-0.5">{r.company}</p>
+                        <p className="text-blue-400/70 text-xs mt-0.5">{r.company}</p>
                       </div>
                       <span className="text-gray-500 text-xs font-mono whitespace-nowrap">
                         {r.period}
@@ -178,7 +178,7 @@ const AboutMe = React.forwardRef((_props, ref) => {
                         <span
                           key={t}
                           className="text-xs px-2 py-0.5 rounded-sm font-mono"
-                          style={{ background: 'rgba(109,40,217,0.1)', border: '1px solid rgba(139,92,246,0.2)', color: 'rgba(196,181,253,0.7)' }}
+                          style={{ background: 'rgba(26,115,232,0.1)', border: '1px solid rgba(66,133,244,0.2)', color: 'rgba(174,203,250,0.7)' }}
                         >
                           {t}
                         </span>
@@ -189,7 +189,7 @@ const AboutMe = React.forwardRef((_props, ref) => {
                         href={r.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-violet-400/70 hover:text-violet-300 transition-colors"
+                        className="text-xs text-blue-400/70 hover:text-blue-300 transition-colors"
                       >
                         {r.linkText} →
                       </a>
@@ -207,7 +207,7 @@ const AboutMe = React.forwardRef((_props, ref) => {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <h3 className="text-white font-semibold text-base mb-4 flex items-center gap-2 tracking-wide">
-              <FaBriefcase className="text-violet-400" size={14} />
+              <FaBriefcase className="text-blue-400" size={14} />
               Industry Experience
             </h3>
             <div className="space-y-4">
@@ -215,14 +215,14 @@ const AboutMe = React.forwardRef((_props, ref) => {
                 <div
                   key={exp.company + exp.period}
                   className="rounded-lg p-5 transition-colors"
-                  style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(139,92,246,0.15)' }}
-                  onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(139,92,246,0.35)'}
-                  onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(139,92,246,0.15)'}
+                  style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(66,133,244,0.15)' }}
+                  onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(66,133,244,0.35)'}
+                  onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(66,133,244,0.15)'}
                 >
                   <div className="flex justify-between items-start flex-wrap gap-2 mb-2">
                     <div>
                       <p className="text-white font-medium text-sm">{exp.role}</p>
-                      <p className="text-violet-400/70 text-xs mt-0.5">{exp.company}</p>
+                      <p className="text-blue-400/70 text-xs mt-0.5">{exp.company}</p>
                     </div>
                     <span className="text-gray-500 text-xs font-mono whitespace-nowrap">
                       {exp.period}
@@ -234,7 +234,7 @@ const AboutMe = React.forwardRef((_props, ref) => {
                       <span
                         key={t}
                         className="text-xs px-2 py-0.5 rounded-sm font-mono"
-                        style={{ background: 'rgba(109,40,217,0.1)', border: '1px solid rgba(139,92,246,0.2)', color: 'rgba(196,181,253,0.7)' }}
+                        style={{ background: 'rgba(26,115,232,0.1)', border: '1px solid rgba(66,133,244,0.2)', color: 'rgba(174,203,250,0.7)' }}
                       >
                         {t}
                       </span>
@@ -245,7 +245,7 @@ const AboutMe = React.forwardRef((_props, ref) => {
                       href={exp.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-violet-400/70 hover:text-violet-300 transition-colors"
+                      className="text-xs text-blue-400/70 hover:text-blue-300 transition-colors"
                     >
                       {exp.linkText} →
                     </a>

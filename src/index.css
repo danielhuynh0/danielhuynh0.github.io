@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Google-palette flair */
+.google-gradient-text {
+  background: linear-gradient(90deg, #4285F4 0%, #EA4335 33%, #FBBC05 66%, #34A853 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: google-shimmer 6s linear infinite;
+}
+@keyframes google-shimmer { to { background-position: 200% center; } }
+
+.google-ring {
+  background: conic-gradient(#4285F4, #EA4335, #FBBC05, #34A853, #4285F4);
+  animation: google-spin 8s linear infinite;
+}
+@keyframes google-spin { to { transform: rotate(360deg); } }
+
+.google-bar {
+  background: linear-gradient(90deg, #4285F4 0 25%, #EA4335 25% 50%, #FBBC05 50% 75%, #34A853 75% 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .google-gradient-text, .google-ring { animation: none; }
+}

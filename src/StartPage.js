@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { SiGooglecloud } from 'react-icons/si';
 import ShaderBackground from './components/ui/ShaderBackground';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
@@ -27,10 +28,10 @@ const StartPage = () => {
     <div className="relative">
       <ShaderBackground />
 
-      <nav className="fixed top-0 left-0 right-0 z-50" style={{ background: 'rgba(6,4,16,0.75)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(139,92,246,0.15)' }}>
+      <nav className="fixed top-0 left-0 right-0 z-50" style={{ background: 'rgba(4,8,20,0.75)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(66,133,244,0.15)' }}>
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <span className="font-bold text-base tracking-tight text-white">
-            daniel<span className="text-violet-400">huynh</span>
+            daniel<span className="text-blue-400">huynh</span>
           </span>
           <div className="hidden sm:flex items-center gap-7">
             <button
@@ -47,7 +48,7 @@ const StartPage = () => {
             </button>
             <a
               href="Daniel Huynh - Resume.pdf"
-              className="text-sm px-4 py-1.5 rounded border border-violet-500/50 text-violet-300 hover:bg-violet-500/10 transition-colors tracking-wide"
+              className="text-sm px-4 py-1.5 rounded border border-blue-500/50 text-blue-300 hover:bg-blue-500/10 transition-colors tracking-wide"
             >
               resume
             </a>
@@ -64,18 +65,27 @@ const StartPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="text-violet-400 text-sm font-mono tracking-widest uppercase mb-4 opacity-80">
-              software engineer
-            </p>
+            <motion.div
+              className="inline-flex items-center gap-2.5 mb-6 pl-1.5 pr-4 py-1.5 rounded-full"
+              style={{ background: 'rgba(66,133,244,0.08)', border: '1px solid rgba(66,133,244,0.3)', boxShadow: '0 0 24px rgba(66,133,244,0.15)' }}
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+            >
+              <span className="flex items-center justify-center w-7 h-7 rounded-full bg-white">
+                <SiGooglecloud size={16} style={{ color: '#4285F4' }} />
+              </span>
+              <span className="text-sm text-gray-200">
+                Software Engineer @ <span className="font-semibold google-gradient-text">Google Cloud</span>
+              </span>
+            </motion.div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-5 leading-none tracking-tight">
               Daniel<br />
-              <span style={{ WebkitTextStroke: '1px rgba(167,139,250,0.6)', color: 'transparent' }}>
-                Huynh
-              </span>
+              <span className="google-gradient-text">Huynh</span>
             </h1>
 
-            <div className="text-lg md:text-xl text-violet-300/80 mb-7 min-h-[1.75rem] font-light">
+            <div className="text-lg md:text-xl text-blue-300/80 mb-7 min-h-[1.75rem] font-light">
               <Typewriter
                 words={[
                   'Software Engineer @ Google',
@@ -92,8 +102,9 @@ const StartPage = () => {
               />
             </div>
 
+            <div className="google-bar h-1 w-24 rounded-full mb-6 mx-auto lg:mx-0" />
             <p className="text-gray-300 text-base mb-3 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Incoming software engineer at Google, building platform for GCE for Google Cloud. Recent MSCS graduate from Johns Hopkins University. CS grad from UVA in 3 years, summa cum laude.
+              Software engineer at <span className="text-white font-medium">Google</span>, building platform for <span className="text-blue-300 font-medium">Compute Engine (GCE)</span> on Google Cloud. Recent MSCS graduate from Johns Hopkins University. CS grad from UVA in 3 years, summa cum laude.
             </p>
             <p className="text-gray-500 text-sm mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
               I love building things, puzzles, ML, AI, and physics. I'm also a geography
@@ -106,9 +117,9 @@ const StartPage = () => {
                   key={skill}
                   className="text-xs px-2.5 py-1 rounded-sm font-mono"
                   style={{
-                    background: 'rgba(109,40,217,0.12)',
-                    border: '1px solid rgba(139,92,246,0.25)',
-                    color: 'rgba(196,181,253,0.85)',
+                    background: 'rgba(26,115,232,0.12)',
+                    border: '1px solid rgba(66,133,244,0.25)',
+                    color: 'rgba(174,203,250,0.85)',
                   }}
                 >
                   {skill}
@@ -124,10 +135,10 @@ const StartPage = () => {
                   rel="noopener noreferrer"
                   className="p-2.5 rounded-lg transition-all"
                   style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
-                  onMouseEnter={e => e.currentTarget.style.background = 'rgba(109,40,217,0.2)'}
+                  onMouseEnter={e => e.currentTarget.style.background = 'rgba(26,115,232,0.2)'}
                   onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
                 >
-                  <FaLinkedin className="text-gray-400 hover:text-violet-300 transition-colors" size={16} />
+                  <FaLinkedin className="text-gray-400 hover:text-blue-300 transition-colors" size={16} />
                 </a>
                 <a
                   href="https://github.com/danielhuynh0"
@@ -144,10 +155,10 @@ const StartPage = () => {
                   href="mailto:danielhuynh523@gmail.com"
                   className="p-2.5 rounded-lg transition-all"
                   style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
-                  onMouseEnter={e => e.currentTarget.style.background = 'rgba(109,40,217,0.2)'}
+                  onMouseEnter={e => e.currentTarget.style.background = 'rgba(26,115,232,0.2)'}
                   onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
                 >
-                  <FaEnvelope className="text-gray-400 hover:text-violet-300 transition-colors" size={16} />
+                  <FaEnvelope className="text-gray-400 hover:text-blue-300 transition-colors" size={16} />
                 </a>
               </div>
 
@@ -163,9 +174,9 @@ const StartPage = () => {
               <button
                 onClick={handleClickProjects}
                 className="text-sm px-5 py-2 rounded-lg text-white font-medium transition-all"
-                style={{ background: 'rgba(109,40,217,0.5)', border: '1px solid rgba(139,92,246,0.5)' }}
-                onMouseEnter={e => e.currentTarget.style.background = 'rgba(109,40,217,0.7)'}
-                onMouseLeave={e => e.currentTarget.style.background = 'rgba(109,40,217,0.5)'}
+                style={{ background: 'rgba(26,115,232,0.5)', border: '1px solid rgba(66,133,244,0.5)' }}
+                onMouseEnter={e => e.currentTarget.style.background = 'rgba(26,115,232,0.7)'}
+                onMouseLeave={e => e.currentTarget.style.background = 'rgba(26,115,232,0.5)'}
               >
                 view projects
               </button>
@@ -179,9 +190,11 @@ const StartPage = () => {
             transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="relative">
+              <div className="google-ring absolute -inset-1.5 rounded-full blur-xl opacity-40" />
+              <div className="google-ring absolute -inset-1 rounded-full" />
               <div
                 className="absolute inset-0 rounded-full blur-3xl opacity-30 scale-110"
-                style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.8) 0%, rgba(76,29,149,0.4) 60%, transparent 100%)' }}
+                style={{ background: 'radial-gradient(circle, rgba(66,133,244,0.8) 0%, rgba(23,78,166,0.4) 60%, transparent 100%)' }}
               />
               <img
                 src="linkedin image.jpg"
@@ -190,8 +203,8 @@ const StartPage = () => {
                 style={{
                   width: '17rem',
                   height: '17rem',
-                  border: '1px solid rgba(139,92,246,0.3)',
-                  boxShadow: '0 0 60px rgba(109,40,217,0.25)',
+                  border: '4px solid #040814',
+                  boxShadow: '0 0 60px rgba(26,115,232,0.25)',
                 }}
               />
             </div>
@@ -206,7 +219,7 @@ const StartPage = () => {
           transition={{ delay: 1.5, duration: 1 }}
         >
           <span className="text-xs text-gray-500 tracking-widest uppercase font-mono">scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-violet-500/50 to-transparent" />
+          <div className="w-px h-8 bg-gradient-to-b from-blue-500/50 to-transparent" />
         </motion.div>
       </div>
 

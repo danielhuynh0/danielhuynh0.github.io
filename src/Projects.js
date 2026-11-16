@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const CATEGORY_STYLES = {
   "Hackathon Winner": "text-amber-300",
   "Hackathon":        "text-orange-300",
-  "Research":         "text-violet-300",
+  "Research":         "text-rose-300",
   "Team Project":     "text-emerald-300",
   "Personal":         "text-sky-300",
   "Academic":         "text-gray-400",
@@ -13,7 +13,7 @@ const CATEGORY_STYLES = {
 const CATEGORY_DOT = {
   "Hackathon Winner": "bg-amber-400",
   "Hackathon":        "bg-orange-400",
-  "Research":         "bg-violet-400",
+  "Research":         "bg-rose-400",
   "Team Project":     "bg-emerald-400",
   "Personal":         "bg-sky-400",
   "Academic":         "bg-gray-500",
@@ -201,14 +201,14 @@ const Projects = React.forwardRef((_props, ref) => {
     return (
       <motion.div
         className="rounded-xl overflow-hidden flex flex-col group"
-        style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(139,92,246,0.15)' }}
+        style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(66,133,244,0.15)' }}
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
         transition={{ duration: 0.5 }}
         whileHover={{ y: -3 }}
-        onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(139,92,246,0.35)'}
-        onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(139,92,246,0.15)'}
+        onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(66,133,244,0.35)'}
+        onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(66,133,244,0.15)'}
       >
         {project.images && project.images.length > 0 && (
           <div className="flex items-center justify-center gap-4 px-6 pt-6" style={{ background: 'rgba(0,0,0,0.2)' }}>
@@ -255,7 +255,7 @@ const Projects = React.forwardRef((_props, ref) => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-xs font-mono text-violet-400/70 hover:text-violet-300 transition-colors"
+                className="inline-flex items-center gap-1 text-xs font-mono text-blue-400/70 hover:text-blue-300 transition-colors"
               >
                 view project →
               </a>
@@ -267,7 +267,7 @@ const Projects = React.forwardRef((_props, ref) => {
   };
 
   return (
-    <section ref={ref} className="py-24" style={{ background: 'rgba(6,4,16,0.92)', borderTop: '1px solid rgba(139,92,246,0.12)' }}>
+    <section ref={ref} className="py-24" style={{ background: 'rgba(4,8,20,0.92)', borderTop: '1px solid rgba(66,133,244,0.12)' }}>
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -276,9 +276,9 @@ const Projects = React.forwardRef((_props, ref) => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-violet-400 text-xs font-mono tracking-widest uppercase mb-3 opacity-70">work</p>
+          <p className="text-blue-400 text-xs font-mono tracking-widest uppercase mb-3 opacity-70">work</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Projects</h2>
-          <div className="w-12 h-px bg-violet-500/50 mx-auto mb-6" />
+          <div className="w-12 h-px bg-blue-500/50 mx-auto mb-6" />
           <div className="flex flex-wrap justify-center gap-3">
             {Object.entries(CATEGORY_STYLES).map(([label]) => (
               <span key={label} className={`flex items-center gap-1.5 text-xs font-mono ${CATEGORY_STYLES[label]}`}>
