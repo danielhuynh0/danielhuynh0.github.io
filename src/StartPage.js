@@ -89,9 +89,8 @@ const StartPage = () => {
               <Typewriter
                 words={[
                   'Software Engineer @ Google',
-                  'MS CS @ Johns Hopkins University',
+                  'MS CS @ Johns Hopkins University, BS CS @ UVA',
                   'Prev SWE/ML Research @ Johns Hopkins APL',
-                  'UVA CS Grad 2024, Summa Cum Laude',
                 ]}
                 loop={0}
                 cursor
@@ -104,7 +103,7 @@ const StartPage = () => {
 
             <div className="google-bar h-1 w-24 rounded-full mb-6 mx-auto lg:mx-0" />
             <p className="text-gray-300 text-base mb-3 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Software engineer at <span className="text-white font-medium">Google</span>, building platform for <span className="text-blue-300 font-medium">Compute Engine (GCE)</span> on Google Cloud. Recent MSCS graduate from Johns Hopkins University. CS grad from UVA in 3 years, summa cum laude.
+              Software engineer at <span className="text-white font-medium">Google</span>, building platform for <span className="text-blue-300 font-medium">Compute Engine (GCE)</span> on Google Cloud. Recent MSCS graduate from Johns Hopkins University, BSCS @ UVA.
             </p>
             <p className="text-gray-500 text-sm mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
               I love building things, puzzles, ML, AI, and physics. I'm also a geography
