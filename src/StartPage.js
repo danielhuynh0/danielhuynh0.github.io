@@ -78,9 +78,9 @@ const StartPage = () => {
             <div className="text-lg md:text-xl text-violet-300/80 mb-7 min-h-[1.75rem] font-light">
               <Typewriter
                 words={[
-                  'Software Engineer @ JHU APL',
+                  'Software Engineer @ Google',
                   'MS CS @ Johns Hopkins University',
-                  'Machine Learning Researcher',
+                  'Prev SWE/ML Research @ Johns Hopkins APL',
                   'UVA CS Grad 2024, Summa Cum Laude',
                 ]}
                 loop={0}
@@ -93,8 +93,7 @@ const StartPage = () => {
             </div>
 
             <p className="text-gray-300 text-base mb-3 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Software engineer at JHU Applied Physics Laboratory, while pursuing my MSCS at Johns Hopkins University 
-              with a concentration in AI. CS grad from UVA in 3 years, summa cum laude.
+              Incoming software engineer at Google, building platform for GCE for Google Cloud. Recent MSCS graduate from Johns Hopkins University. CS grad from UVA in 3 years, summa cum laude.
             </p>
             <p className="text-gray-500 text-sm mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
               I love building things, puzzles, ML, AI, and physics. I'm also a geography
